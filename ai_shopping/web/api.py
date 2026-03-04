@@ -8,30 +8,39 @@ router = APIRouter()
 
 
 @router.get("/search")
-async def search(request: Request, q: str = ""):
+async def search(request: Request, q: str = "", sort: str = "relevance"):
     if not q.strip():
         return {"items": [], "filter_options": {}, "total": 0, "errors": []}
 
     orchestrator = request.app.state.orchestrator
     result = await orchestrator.search(q)
 
-    items_data = []
-    for item in result["items"]:
-        item_dict = asdict(item)
-        items_data.append(item_dict)
+    items_data = [asdict(item) for item in result["items"]]
 
+    # Apply sorting
+    if sort == "price_asc":
+        items_data.sort(key=lambda x: _parse_price(x.get("price")) or float("inf"))
+    elif sort == "price_desc":
+        items_data.sort(key=lambda x: _parse_price(x.get("price")) or 0, reverse=True)
+    elif sort == "name_asc":
+        items_data.sort(key=lambda x: x.get("title", "").lower())
+
+    intent = result["intent"]
     return {
         "items": items_data,
         "filter_options": result["filter_options"],
         "total": result["total"],
         "errors": result["errors"],
-        "query": result["intent"].query,
+        "query": intent.query,
         "parsed": {
-            "min_price": result["intent"].min_price,
-            "max_price": result["intent"].max_price,
-            "colour": result["intent"].colour,
-            "condition": result["intent"].condition,
-            "marketplaces": result["intent"].marketplaces,
+            "min_price": intent.min_price,
+            "max_price": intent.max_price,
+            "colour": intent.colour,
+            "brand": intent.brand,
+            "condition": intent.condition,
+            "material": intent.material,
+            "size": intent.size,
+            "marketplaces": intent.marketplaces,
         },
     }
 
@@ -40,3 +49,13 @@ async def search(request: Request, q: str = ""):
 async def list_marketplaces(request: Request):
     registry = request.app.state.registry
     return {"marketplaces": registry.names()}
+
+
+def _parse_price(price_str: str | None) -> float | None:
+    if not price_str:
+        return None
+    try:
+        cleaned = price_str.replace("£", "").replace("$", "").replace("€", "").replace(",", "").strip()
+        return float(cleaned)
+    except (ValueError, AttributeError):
+        return None

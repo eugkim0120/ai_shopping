@@ -38,7 +38,15 @@
     <main class="container">
         <div id="searchMeta" class="search-meta hidden">
             <div class="parsed-intent" id="parsedIntent"></div>
-            <div class="result-count" id="resultCount"></div>
+            <div class="meta-controls">
+                <select id="sortSelect" class="sort-select">
+                    <option value="relevance">Sort: Relevance</option>
+                    <option value="price_asc">Price: Low to High</option>
+                    <option value="price_desc">Price: High to Low</option>
+                    <option value="name_asc">Name: A to Z</option>
+                </select>
+                <span class="result-count" id="resultCount"></span>
+            </div>
         </div>
 
         <div class="results-layout">
@@ -65,7 +73,7 @@
 
     <footer>
         <div class="container">
-            <p>AI Shopping v0.1.0 — Multi-Marketplace Intelligent Search</p>
+            <p>AI Shopping v0.3.0 — Multi-Marketplace Intelligent Search</p>
         </div>
     </footer>
 

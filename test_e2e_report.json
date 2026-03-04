@@ -1,0 +1,942 @@
+{
+  "timestamp": "2026-03-04T18:38:54.780449",
+  "base_url": "http://127.0.0.1:8000",
+  "results": [
+    {
+      "query": "wireless headphones",
+      "status": 200,
+      "total": 6,
+      "errors": [
+        "Using demo data (6 items) \u2014 live scrapers unavailable"
+      ],
+      "parsed_query": "wireless headphones",
+      "parsed_filters": {
+        "min_price": null,
+        "max_price": null,
+        "colour": null,
+        "brand": null,
+        "condition": null,
+        "material": null,
+        "size": null,
+        "marketplaces": []
+      },
+      "items_sample": [
+        {
+          "title": "JBL Tune 510BT Wireless Headphones Blue",
+          "price": "\u00a318.00",
+          "marketplace": "vinted"
+        },
+        {
+          "title": "Sony DualSense Wireless Controller for PS5 - White",
+          "price": "\u00a359.99",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "Sony WH-1000XM4 Headphones Barely Used",
+          "price": "\u00a3150.00",
+          "marketplace": "gumtree"
+        }
+      ],
+      "filter_options": {
+        "marketplace": 4,
+        "brand": 3,
+        "condition": 3,
+        "colour": 3,
+        "type": 1,
+        "connectivity": 1
+      },
+      "elapsed_s": 0.48,
+      "success": true
+    },
+    {
+      "query": "iPhone 15 Pro Max",
+      "status": 200,
+      "total": 10,
+      "errors": [
+        "Using demo data (10 items) \u2014 live scrapers unavailable"
+      ],
+      "parsed_query": "iphone 15 pro max",
+      "parsed_filters": {
+        "min_price": null,
+        "max_price": null,
+        "colour": null,
+        "brand": null,
+        "condition": null,
+        "material": null,
+        "size": null,
+        "marketplaces": []
+      },
+      "items_sample": [
+        {
+          "title": "Optimum Nutrition Gold Standard Whey Protein Chocolate 2.27k",
+          "price": "\u00a344.99",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "MyProtein Impact Whey Protein Chocolate Smooth 5kg",
+          "price": "\u00a352.99",
+          "marketplace": "ebay"
+        },
+        {
+          "title": "Manduka PRO Yoga Mat 6mm - Black",
+          "price": "\u00a389.00",
+          "marketplace": "ebay"
+        }
+      ],
+      "filter_options": {
+        "marketplace": 3,
+        "brand": 7,
+        "condition": 3,
+        "colour": 7,
+        "size": 1,
+        "type": 2,
+        "size_or_spec": 7,
+        "storage": 2,
+        "flavour": 1,
+        "weight": 2,
+        "thickness": 1,
+        "capacity": 1,
+        "connectivity": 1
+      },
+      "elapsed_s": 0.03,
+      "success": true
+    },
+    {
+      "query": "running shoes size 10",
+      "status": 200,
+      "total": 13,
+      "errors": [
+        "Using demo data (13 items) \u2014 live scrapers unavailable"
+      ],
+      "parsed_query": "running shoes size 10",
+      "parsed_filters": {
+        "min_price": null,
+        "max_price": null,
+        "colour": null,
+        "brand": null,
+        "condition": null,
+        "material": null,
+        "size": "10",
+        "marketplaces": []
+      },
+      "items_sample": [
+        {
+          "title": "Yoga Mat 10mm Thick Blue with Carry Strap",
+          "price": "\u00a312.00",
+          "marketplace": "gumtree"
+        },
+        {
+          "title": "JBL Tune 510BT Wireless Headphones Blue",
+          "price": "\u00a318.00",
+          "marketplace": "vinted"
+        },
+        {
+          "title": "Wrangler Texas Men's Jeans Blue Size 32x32",
+          "price": "\u00a339.99",
+          "marketplace": "ebay"
+        }
+      ],
+      "filter_options": {
+        "marketplace": 4,
+        "brand": 9,
+        "condition": 4,
+        "colour": 6,
+        "size": 6,
+        "type": 3,
+        "size_or_spec": 8,
+        "thickness": 1,
+        "connectivity": 1
+      },
+      "elapsed_s": 0.03,
+      "success": true
+    },
+    {
+      "query": "black winter jacket under \u00a380",
+      "status": 200,
+      "total": 7,
+      "errors": [
+        "Using demo data (7 items) \u2014 live scrapers unavailable"
+      ],
+      "parsed_query": "black winter jacket",
+      "parsed_filters": {
+        "min_price": null,
+        "max_price": 80.0,
+        "colour": "black",
+        "brand": null,
+        "condition": null,
+        "material": null,
+        "size": null,
+        "marketplaces": []
+      },
+      "items_sample": [
+        {
+          "title": "Zara Leather Tote Handbag Black",
+          "price": "\u00a328.00",
+          "marketplace": "vinted"
+        },
+        {
+          "title": "Superdry Winter Coat Women's Grey Size S",
+          "price": "\u00a340.00",
+          "marketplace": "vinted"
+        },
+        {
+          "title": "Cosori Air Fryer 5.5L Black",
+          "price": "\u00a345.00",
+          "marketplace": "gumtree"
+        }
+      ],
+      "filter_options": {
+        "marketplace": 2,
+        "brand": 7,
+        "condition": 1,
+        "colour": 4,
+        "material": 1,
+        "size": 4,
+        "type": 3,
+        "size_or_spec": 5,
+        "capacity": 1
+      },
+      "elapsed_s": 0.03,
+      "success": true
+    },
+    {
+      "query": "Samsung Galaxy S24 used",
+      "status": 200,
+      "total": 10,
+      "errors": [
+        "Using demo data (10 items) \u2014 live scrapers unavailable"
+      ],
+      "parsed_query": "samsung galaxy s24",
+      "parsed_filters": {
+        "min_price": null,
+        "max_price": null,
+        "colour": null,
+        "brand": "samsung",
+        "condition": "used",
+        "material": null,
+        "size": null,
+        "marketplaces": []
+      },
+      "items_sample": [
+        {
+          "title": "Men's Casio Watch Gold Tone Vintage",
+          "price": "\u00a335.00",
+          "marketplace": "gumtree"
+        },
+        {
+          "title": "Nike Dunk Low Panda Size 10 - Used",
+          "price": "\u00a375.00",
+          "marketplace": "vinted"
+        },
+        {
+          "title": "Sony WH-1000XM4 Headphones Barely Used",
+          "price": "\u00a3150.00",
+          "marketplace": "gumtree"
+        }
+      ],
+      "filter_options": {
+        "marketplace": 4,
+        "brand": 6,
+        "condition": 3,
+        "colour": 7,
+        "size": 2,
+        "type": 2,
+        "size_or_spec": 5,
+        "storage": 2,
+        "resolution": 1
+      },
+      "elapsed_s": 0.03,
+      "success": true
+    },
+    {
+      "query": "coffee machine",
+      "status": 200,
+      "total": 3,
+      "errors": [
+        "Using demo data (3 items) \u2014 live scrapers unavailable"
+      ],
+      "parsed_query": "coffee machine",
+      "parsed_filters": {
+        "min_price": null,
+        "max_price": null,
+        "colour": null,
+        "brand": null,
+        "condition": null,
+        "material": null,
+        "size": null,
+        "marketplaces": []
+      },
+      "items_sample": [
+        {
+          "title": "Nespresso Vertuo Next Coffee Machine - Red",
+          "price": "\u00a379.99",
+          "marketplace": "ebay"
+        },
+        {
+          "title": "De'Longhi Magnifica S Bean to Cup Coffee Machine - Silver",
+          "price": "\u00a3299.00",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "Sage Barista Express Coffee Machine Silver",
+          "price": "\u00a3350.00",
+          "marketplace": "gumtree"
+        }
+      ],
+      "filter_options": {
+        "marketplace": 3,
+        "brand": 3,
+        "condition": 2,
+        "colour": 2,
+        "type": 2,
+        "size_or_spec": 1
+      },
+      "elapsed_s": 0.03,
+      "success": true
+    },
+    {
+      "query": "yoga mat",
+      "status": 200,
+      "total": 4,
+      "errors": [
+        "Using demo data (4 items) \u2014 live scrapers unavailable"
+      ],
+      "parsed_query": "yoga mat",
+      "parsed_filters": {
+        "min_price": null,
+        "max_price": null,
+        "colour": null,
+        "brand": null,
+        "condition": null,
+        "material": null,
+        "size": null,
+        "marketplaces": []
+      },
+      "items_sample": [
+        {
+          "title": "Yoga Mat 10mm Thick Blue with Carry Strap",
+          "price": "\u00a312.00",
+          "marketplace": "gumtree"
+        },
+        {
+          "title": "Gaiam Essentials Thick Yoga Mat - Purple 6mm",
+          "price": "\u00a324.99",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "Manduka PRO Yoga Mat 6mm - Black",
+          "price": "\u00a389.00",
+          "marketplace": "ebay"
+        }
+      ],
+      "filter_options": {
+        "marketplace": 3,
+        "brand": 3,
+        "colour": 4,
+        "type": 1,
+        "size_or_spec": 3,
+        "thickness": 2
+      },
+      "elapsed_s": 0.03,
+      "success": true
+    },
+    {
+      "query": "kids bicycle",
+      "status": 200,
+      "total": 3,
+      "errors": [
+        "Using demo data (3 items) \u2014 live scrapers unavailable"
+      ],
+      "parsed_query": "kids bicycle",
+      "parsed_filters": {
+        "min_price": null,
+        "max_price": null,
+        "colour": null,
+        "brand": null,
+        "condition": null,
+        "material": null,
+        "size": null,
+        "marketplaces": []
+      },
+      "items_sample": [
+        {
+          "title": "Kids Bicycle 20 Inch Blue - Collection Only",
+          "price": "\u00a340.00",
+          "marketplace": "gumtree"
+        },
+        {
+          "title": "Kids Balance Bicycle 12 inch Pink",
+          "price": "\u00a349.99",
+          "marketplace": "ebay"
+        },
+        {
+          "title": "Fiskars Kids Bicycle 16 inch - Red",
+          "price": "\u00a3149.99",
+          "marketplace": "amazon"
+        }
+      ],
+      "filter_options": {
+        "marketplace": 3,
+        "brand": 1,
+        "colour": 3,
+        "size": 3,
+        "type": 1,
+        "size_or_spec": 3
+      },
+      "elapsed_s": 0.03,
+      "success": true
+    },
+    {
+      "query": "Nintendo Switch OLED",
+      "status": 200,
+      "total": 2,
+      "errors": [
+        "Using demo data (2 items) \u2014 live scrapers unavailable"
+      ],
+      "parsed_query": "nintendo switch oled",
+      "parsed_filters": {
+        "min_price": null,
+        "max_price": null,
+        "colour": null,
+        "brand": "nintendo",
+        "condition": null,
+        "material": null,
+        "size": null,
+        "marketplaces": []
+      },
+      "items_sample": [
+        {
+          "title": "Nintendo Switch OLED Neon - Boxed Like New",
+          "price": "\u00a3269.00",
+          "marketplace": "ebay"
+        },
+        {
+          "title": "Nintendo Switch OLED Model - White",
+          "price": "\u00a3309.99",
+          "marketplace": "amazon"
+        }
+      ],
+      "filter_options": {
+        "marketplace": 2,
+        "brand": 1,
+        "condition": 1,
+        "colour": 2,
+        "storage": 1
+      },
+      "elapsed_s": 0.03,
+      "success": true
+    },
+    {
+      "query": "desk lamp LED",
+      "status": 200,
+      "total": 4,
+      "errors": [
+        "Using demo data (4 items) \u2014 live scrapers unavailable"
+      ],
+      "parsed_query": "desk lamp led",
+      "parsed_filters": {
+        "min_price": null,
+        "max_price": null,
+        "colour": null,
+        "brand": null,
+        "condition": null,
+        "material": null,
+        "size": null,
+        "marketplaces": []
+      },
+      "items_sample": [
+        {
+          "title": "TaoTronics LED Desk Lamp Eye-Caring Silver",
+          "price": "\u00a324.99",
+          "marketplace": "ebay"
+        },
+        {
+          "title": "LED Desk Lamp with USB Charging Port - Dimmable White",
+          "price": "\u00a329.99",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "Nintendo Switch OLED Neon - Boxed Like New",
+          "price": "\u00a3269.00",
+          "marketplace": "ebay"
+        }
+      ],
+      "filter_options": {
+        "marketplace": 2,
+        "brand": 2,
+        "condition": 1,
+        "colour": 3,
+        "type": 1,
+        "feature": 1,
+        "storage": 1
+      },
+      "elapsed_s": 0.03,
+      "success": true
+    },
+    {
+      "query": "protein powder chocolate",
+      "status": 200,
+      "total": 2,
+      "errors": [
+        "Using demo data (2 items) \u2014 live scrapers unavailable"
+      ],
+      "parsed_query": "protein powder chocolate",
+      "parsed_filters": {
+        "min_price": null,
+        "max_price": null,
+        "colour": null,
+        "brand": null,
+        "condition": null,
+        "material": null,
+        "size": null,
+        "marketplaces": []
+      },
+      "items_sample": [
+        {
+          "title": "Optimum Nutrition Gold Standard Whey Protein Chocolate 2.27k",
+          "price": "\u00a344.99",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "MyProtein Impact Whey Protein Chocolate Smooth 5kg",
+          "price": "\u00a352.99",
+          "marketplace": "ebay"
+        }
+      ],
+      "filter_options": {
+        "marketplace": 2,
+        "brand": 2,
+        "colour": 1,
+        "size_or_spec": 2,
+        "flavour": 1,
+        "weight": 2
+      },
+      "elapsed_s": 0.03,
+      "success": true
+    },
+    {
+      "query": "women's handbag leather",
+      "status": 200,
+      "total": 5,
+      "errors": [
+        "Using demo data (5 items) \u2014 live scrapers unavailable"
+      ],
+      "parsed_query": "women's handbag leather",
+      "parsed_filters": {
+        "min_price": null,
+        "max_price": null,
+        "colour": null,
+        "brand": null,
+        "condition": null,
+        "material": "leather",
+        "size": "s",
+        "marketplaces": []
+      },
+      "items_sample": [
+        {
+          "title": "H&M Faux Leather Handbag Brown",
+          "price": "\u00a312.00",
+          "marketplace": "vinted"
+        },
+        {
+          "title": "Zara Leather Tote Handbag Black",
+          "price": "\u00a328.00",
+          "marketplace": "vinted"
+        },
+        {
+          "title": "Superdry Winter Coat Women's Grey Size S",
+          "price": "\u00a340.00",
+          "marketplace": "vinted"
+        }
+      ],
+      "filter_options": {
+        "marketplace": 3,
+        "brand": 5,
+        "colour": 3,
+        "material": 2,
+        "size": 1,
+        "type": 1,
+        "size_or_spec": 3
+      },
+      "elapsed_s": 0.03,
+      "success": true
+    },
+    {
+      "query": "4K monitor 27 inch",
+      "status": 200,
+      "total": 8,
+      "errors": [
+        "Using demo data (8 items) \u2014 live scrapers unavailable"
+      ],
+      "parsed_query": "4k monitor 27 inch",
+      "parsed_filters": {
+        "min_price": null,
+        "max_price": null,
+        "colour": null,
+        "brand": null,
+        "condition": null,
+        "material": null,
+        "size": "27",
+        "marketplaces": []
+      },
+      "items_sample": [
+        {
+          "title": "Kids Bicycle 20 Inch Blue - Collection Only",
+          "price": "\u00a340.00",
+          "marketplace": "gumtree"
+        },
+        {
+          "title": "Optimum Nutrition Gold Standard Whey Protein Chocolate 2.27k",
+          "price": "\u00a344.99",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "Kids Balance Bicycle 12 inch Pink",
+          "price": "\u00a349.99",
+          "marketplace": "ebay"
+        }
+      ],
+      "filter_options": {
+        "marketplace": 3,
+        "brand": 6,
+        "colour": 5,
+        "size": 5,
+        "type": 1,
+        "size_or_spec": 6,
+        "resolution": 2,
+        "flavour": 1,
+        "weight": 1,
+        "panel": 1
+      },
+      "elapsed_s": 0.03,
+      "success": true
+    },
+    {
+      "query": "air fryer",
+      "status": 200,
+      "total": 8,
+      "errors": [
+        "Using demo data (8 items) \u2014 live scrapers unavailable"
+      ],
+      "parsed_query": "air fryer",
+      "parsed_filters": {
+        "min_price": null,
+        "max_price": null,
+        "colour": null,
+        "brand": null,
+        "condition": null,
+        "material": null,
+        "size": null,
+        "marketplaces": []
+      },
+      "items_sample": [
+        {
+          "title": "Cosori Air Fryer 5.5L Black",
+          "price": "\u00a345.00",
+          "marketplace": "gumtree"
+        },
+        {
+          "title": "Nike Air Force 1 White Size 9 - Worn Once",
+          "price": "\u00a360.00",
+          "marketplace": "gumtree"
+        },
+        {
+          "title": "IKEA MARKUS Office Chair Black",
+          "price": "\u00a380.00",
+          "marketplace": "gumtree"
+        }
+      ],
+      "filter_options": {
+        "marketplace": 3,
+        "brand": 6,
+        "condition": 1,
+        "colour": 3,
+        "material": 1,
+        "size": 2,
+        "type": 3,
+        "size_or_spec": 5,
+        "capacity": 3,
+        "pieces": 1,
+        "connectivity": 1
+      },
+      "elapsed_s": 0.03,
+      "success": true
+    },
+    {
+      "query": "garden furniture set",
+      "status": 200,
+      "total": 4,
+      "errors": [
+        "Using demo data (4 items) \u2014 live scrapers unavailable"
+      ],
+      "parsed_query": "garden furniture set",
+      "parsed_filters": {
+        "min_price": null,
+        "max_price": null,
+        "colour": null,
+        "brand": null,
+        "condition": null,
+        "material": null,
+        "size": null,
+        "marketplaces": []
+      },
+      "items_sample": [
+        {
+          "title": "Garden Table and 4 Chairs Set Wood",
+          "price": "\u00a3120.00",
+          "marketplace": "gumtree"
+        },
+        {
+          "title": "Michael Kors Jet Set Travel Leather Handbag - Brown",
+          "price": "\u00a3159.00",
+          "marketplace": "ebay"
+        },
+        {
+          "title": "Rattan Garden Furniture Set 5 Piece Brown",
+          "price": "\u00a3299.99",
+          "marketplace": "ebay"
+        }
+      ],
+      "filter_options": {
+        "marketplace": 3,
+        "brand": 2,
+        "colour": 2,
+        "material": 3,
+        "type": 2,
+        "pieces": 2
+      },
+      "elapsed_s": 0.03,
+      "success": true
+    },
+    {
+      "query": "electric toothbrush",
+      "status": 200,
+      "total": 2,
+      "errors": [
+        "Using demo data (2 items) \u2014 live scrapers unavailable"
+      ],
+      "parsed_query": "electric toothbrush",
+      "parsed_filters": {
+        "min_price": null,
+        "max_price": null,
+        "colour": null,
+        "brand": null,
+        "condition": null,
+        "material": null,
+        "size": null,
+        "marketplaces": []
+      },
+      "items_sample": [
+        {
+          "title": "Philips Sonicare DiamondClean Electric Toothbrush",
+          "price": "\u00a3129.99",
+          "marketplace": "ebay"
+        },
+        {
+          "title": "Oral-B iO Series 9 Electric Toothbrush - Black Onyx",
+          "price": "\u00a3249.99",
+          "marketplace": "amazon"
+        }
+      ],
+      "filter_options": {
+        "marketplace": 2,
+        "brand": 2,
+        "colour": 2,
+        "type": 1
+      },
+      "elapsed_s": 0.03,
+      "success": true
+    },
+    {
+      "query": "blue jeans size 32",
+      "status": 200,
+      "total": 18,
+      "errors": [
+        "Using demo data (18 items) \u2014 live scrapers unavailable"
+      ],
+      "parsed_query": "blue jeans size 32",
+      "parsed_filters": {
+        "min_price": null,
+        "max_price": null,
+        "colour": "blue",
+        "brand": null,
+        "condition": null,
+        "material": null,
+        "size": "32",
+        "marketplaces": []
+      },
+      "items_sample": [
+        {
+          "title": "Yoga Mat 10mm Thick Blue with Carry Strap",
+          "price": "\u00a312.00",
+          "marketplace": "gumtree"
+        },
+        {
+          "title": "JBL Tune 510BT Wireless Headphones Blue",
+          "price": "\u00a318.00",
+          "marketplace": "vinted"
+        },
+        {
+          "title": "Levi's 511 Slim Fit Jeans Blue 32W",
+          "price": "\u00a322.00",
+          "marketplace": "vinted"
+        }
+      ],
+      "filter_options": {
+        "marketplace": 4,
+        "brand": 12,
+        "condition": 4,
+        "colour": 6,
+        "size": 8,
+        "type": 4,
+        "size_or_spec": 11,
+        "connectivity": 2,
+        "resolution": 1,
+        "thickness": 1,
+        "storage": 1
+      },
+      "elapsed_s": 0.03,
+      "success": true
+    },
+    {
+      "query": "Dyson vacuum cleaner refurbished",
+      "status": 200,
+      "total": 3,
+      "errors": [
+        "Using demo data (3 items) \u2014 live scrapers unavailable"
+      ],
+      "parsed_query": "dyson vacuum cleaner",
+      "parsed_filters": {
+        "min_price": null,
+        "max_price": null,
+        "colour": null,
+        "brand": "dyson",
+        "condition": "refurbished",
+        "material": null,
+        "size": null,
+        "marketplaces": []
+      },
+      "items_sample": [
+        {
+          "title": "Dyson V11 Absolute Cordless Vacuum - Refurbished",
+          "price": "\u00a3299.99",
+          "marketplace": "ebay"
+        },
+        {
+          "title": "Samsung Galaxy S24 128GB - Refurbished Good",
+          "price": "\u00a3449.99",
+          "marketplace": "ebay"
+        },
+        {
+          "title": "Dyson V15 Detect Absolute Cordless Vacuum Cleaner",
+          "price": "\u00a3599.99",
+          "marketplace": "amazon"
+        }
+      ],
+      "filter_options": {
+        "marketplace": 2,
+        "brand": 2,
+        "condition": 2,
+        "colour": 2,
+        "type": 1,
+        "size_or_spec": 1,
+        "storage": 1
+      },
+      "elapsed_s": 0.03,
+      "success": true
+    },
+    {
+      "query": "PlayStation 5 controller",
+      "status": 200,
+      "total": 3,
+      "errors": [
+        "Using demo data (3 items) \u2014 live scrapers unavailable"
+      ],
+      "parsed_query": "playstation 5 controller",
+      "parsed_filters": {
+        "min_price": null,
+        "max_price": null,
+        "colour": null,
+        "brand": "playstation",
+        "condition": null,
+        "material": null,
+        "size": null,
+        "marketplaces": []
+      },
+      "items_sample": [
+        {
+          "title": "Sony DualSense Wireless Controller for PS5 - White",
+          "price": "\u00a359.99",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "PS5 DualSense Edge Wireless Controller - Black",
+          "price": "\u00a3189.99",
+          "marketplace": "ebay"
+        },
+        {
+          "title": "PS5 Disc Edition with 2 Controllers",
+          "price": "\u00a3400.00",
+          "marketplace": "gumtree"
+        }
+      ],
+      "filter_options": {
+        "marketplace": 3,
+        "brand": 1,
+        "condition": 1,
+        "colour": 2,
+        "type": 1
+      },
+      "elapsed_s": 0.03,
+      "success": true
+    },
+    {
+      "query": "gold watch under \u00a3200 on ebay",
+      "status": 200,
+      "total": 1,
+      "errors": [
+        "Using demo data (1 items) \u2014 live scrapers unavailable"
+      ],
+      "parsed_query": "gold watch",
+      "parsed_filters": {
+        "min_price": null,
+        "max_price": 200.0,
+        "colour": "gold",
+        "brand": null,
+        "condition": null,
+        "material": null,
+        "size": null,
+        "marketplaces": [
+          "ebay"
+        ]
+      },
+      "items_sample": [
+        {
+          "title": "Seiko Presage Automatic Men's Watch Gold",
+          "price": "\u00a3189.00",
+          "marketplace": "ebay"
+        }
+      ],
+      "filter_options": {
+        "marketplace": 1,
+        "brand": 1,
+        "colour": 1,
+        "type": 1,
+        "size_or_spec": 1
+      },
+      "elapsed_s": 0.01,
+      "success": true
+    }
+  ],
+  "summary": {
+    "total_searches": 20,
+    "api_successes": 20,
+    "api_failures": 0,
+    "zero_result_searches": 0,
+    "searches_with_results": 20,
+    "total_scraper_errors": 20,
+    "avg_response_time_s": 0.05,
+    "max_response_time_s": 0.48,
+    "min_response_time_s": 0.01
+  }
+}

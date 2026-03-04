@@ -14,6 +14,8 @@ class SearchIntent:
     colour: str | None = None
     brand: str | None = None
     condition: str | None = None
+    material: str | None = None
+    size: str | None = None
     marketplaces: list[str] = field(default_factory=list)
     raw_query: str = ""
 
@@ -21,13 +23,35 @@ class SearchIntent:
 PRICE_UNDER = re.compile(r"(?:under|below|less than|max|up to)\s*[£$€]?\s*([\d,]+)", re.I)
 PRICE_OVER = re.compile(r"(?:over|above|more than|min|at least)\s*[£$€]?\s*([\d,]+)", re.I)
 PRICE_RANGE = re.compile(r"[£$€]?\s*([\d,]+)\s*[-–to]+\s*[£$€]?\s*([\d,]+)", re.I)
+
 COLOUR_WORDS = {
     "black", "white", "red", "blue", "green", "yellow", "orange", "purple",
-    "pink", "grey", "gray", "brown", "silver", "gold", "navy",
+    "pink", "grey", "gray", "brown", "silver", "gold", "navy", "beige",
+    "neon", "cream",
 }
-CONDITION_WORDS = {"new", "used", "refurbished", "like new", "good condition"}
+
+CONDITION_WORDS = ["like new", "good condition", "refurbished", "used", "new"]
+
+MATERIAL_WORDS = {"leather", "cotton", "wool", "silk", "denim", "nylon", "rattan", "wood", "metal", "stainless steel"}
+
+BRAND_WORDS = {
+    "apple", "samsung", "sony", "nike", "adidas", "dyson", "nintendo", "playstation",
+    "xbox", "bose", "jbl", "dell", "lg", "philips", "oral-b", "tefal", "ninja",
+    "nespresso", "sage", "levi's", "levis", "reebok", "puma", "the north face",
+    "columbia", "superdry", "zara", "h&m", "michael kors", "coach", "ted baker",
+    "casio", "seiko", "fossil", "timex", "ikea", "beats",
+}
+
+SIZE_PATTERN = re.compile(
+    r"\bsize\s*(\d+(?:\.\d+)?)\b"
+    r"|\b(\d+(?:\.\d+)?)\s*(?:inch|\")\b"
+    r"|\b(XS|XXS|XXL|XL|S|M|L)\b",
+    re.I,
+)
+
 MARKETPLACE_ALIASES = {
     "amazon": "amazon", "ebay": "ebay", "gumtree": "gumtree",
+    "facebook marketplace": "facebook_marketplace",
     "facebook": "facebook_marketplace", "fb marketplace": "facebook_marketplace",
     "fb": "facebook_marketplace", "vinted": "vinted",
 }
@@ -41,8 +65,11 @@ class SearchDetector:
         text = raw_query.lower()
 
         self._extract_prices(text, intent)
-        self._extract_colour(text, intent)
         self._extract_condition(text, intent)
+        self._extract_brand(text, intent)
+        self._extract_material(text, intent)
+        self._extract_size(text, intent)
+        self._extract_colour(text, intent)
         self._extract_marketplaces(text, intent)
         intent.query = self._clean_query(text, intent)
 
@@ -75,9 +102,27 @@ class SearchDetector:
                 intent.condition = condition
                 return
 
+    def _extract_brand(self, text: str, intent: SearchIntent):
+        for brand in sorted(BRAND_WORDS, key=len, reverse=True):
+            if brand in text:
+                intent.brand = brand
+                return
+
+    def _extract_material(self, text: str, intent: SearchIntent):
+        for material in MATERIAL_WORDS:
+            if re.search(rf"\b{material}\b", text):
+                intent.material = material
+                return
+
+    def _extract_size(self, text: str, intent: SearchIntent):
+        match = SIZE_PATTERN.search(text)
+        if match:
+            intent.size = next(g for g in match.groups() if g is not None)
+
     def _extract_marketplaces(self, text: str, intent: SearchIntent):
-        for alias, name in MARKETPLACE_ALIASES.items():
+        for alias in sorted(MARKETPLACE_ALIASES.keys(), key=len, reverse=True):
             if alias in text:
+                name = MARKETPLACE_ALIASES[alias]
                 if name not in intent.marketplaces:
                     intent.marketplaces.append(name)
 
@@ -85,12 +130,15 @@ class SearchDetector:
         cleaned = text
         for pattern in [PRICE_UNDER, PRICE_OVER, PRICE_RANGE]:
             cleaned = pattern.sub("", cleaned)
-        if intent.colour:
-            cleaned = re.sub(rf"\b{intent.colour}\b", "", cleaned)
+
         if intent.condition:
             cleaned = cleaned.replace(intent.condition, "")
-        for alias in MARKETPLACE_ALIASES:
+
+        for alias in sorted(MARKETPLACE_ALIASES.keys(), key=len, reverse=True):
             cleaned = cleaned.replace(alias, "")
-        cleaned = re.sub(r"\b(on|from|in|the|a|an)\b", "", cleaned)
+
+        # Only strip filler words at word boundaries and only when standalone
+        cleaned = re.sub(r"\bon\s*$", "", cleaned)
+        cleaned = re.sub(r"\bfrom\s*$", "", cleaned)
         cleaned = re.sub(r"\s+", " ", cleaned).strip()
         return cleaned

@@ -13,6 +13,7 @@
     --success: #22c55e;
     --warning: #f59e0b;
     --error: #ef4444;
+    --info: #3b82f6;
     --radius: 12px;
     --radius-sm: 8px;
     --transition: 0.2s ease;
@@ -157,6 +158,8 @@ body {
     padding: 20px 0;
     border-bottom: 1px solid var(--border);
     margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
 .parsed-intent {
@@ -178,9 +181,31 @@ body {
     color: var(--accent);
 }
 
+.meta-controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.sort-select {
+    padding: 6px 12px;
+    background: var(--bg-input);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: var(--text);
+    font-size: 0.85rem;
+    cursor: pointer;
+    outline: none;
+}
+
+.sort-select:focus {
+    border-color: var(--accent);
+}
+
 .result-count {
     font-size: 0.9rem;
     color: var(--text-muted);
+    white-space: nowrap;
 }
 
 /* Results Layout */
@@ -282,6 +307,13 @@ body {
     padding: 16px;
 }
 
+.item-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
 .item-marketplace {
     display: inline-block;
     padding: 2px 8px;
@@ -292,7 +324,49 @@ body {
     letter-spacing: 0.03em;
     background: var(--accent-glow);
     color: var(--accent-hover);
-    margin-bottom: 8px;
+}
+
+.item-condition {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.item-condition--new {
+    background: rgba(34, 197, 94, 0.15);
+    color: var(--success);
+}
+
+.item-condition--used {
+    background: rgba(245, 158, 11, 0.15);
+    color: var(--warning);
+}
+
+.item-condition--refurbished {
+    background: rgba(59, 130, 246, 0.15);
+    color: var(--info);
+}
+
+.item-condition--like-new {
+    background: rgba(34, 197, 94, 0.1);
+    color: #86efac;
+}
+
+.item-condition--good-condition {
+    background: rgba(245, 158, 11, 0.1);
+    color: #fcd34d;
+}
+
+.item-brand {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent-hover);
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
 }
 
 .item-title {
@@ -370,6 +444,15 @@ body {
     margin-top: 16px;
 }
 
+.errors .error-line.info {
+    color: var(--info);
+}
+
+.errors:has(.info) {
+    background: rgba(59, 130, 246, 0.08);
+    border-color: rgba(59, 130, 246, 0.25);
+}
+
 .hidden {
     display: none !important;
 }
@@ -430,5 +513,10 @@ footer {
         flex-direction: column;
         gap: 8px;
         align-items: flex-start;
+    }
+
+    .meta-controls {
+        width: 100%;
+        justify-content: space-between;
     }
 }
