@@ -43,7 +43,7 @@ async def lifespan(app: FastAPI):
     await registry.close_all()
 
 
-app = FastAPI(title="AI Shopping", version="0.1.0", lifespan=lifespan)
+app = FastAPI(title="AI Shopping", version="0.5.0", lifespan=lifespan)
 app.mount("/static", StaticFiles(directory=WEB_DIR / "static"), name="static")
 app.include_router(api_router, prefix="/api")
 

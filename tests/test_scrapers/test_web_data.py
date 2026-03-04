@@ -20,7 +20,10 @@ async def test_search_returns_real_products(amazon_web):
     results = await amazon_web.search("bluetooth speaker")
     assert len(results) > 0
     # At least most results should be speakers
-    speaker_count = sum(1 for r in results if "speaker" in r.title.lower() or "bluetooth" in r.title.lower())
+    speaker_count = sum(
+        1 for r in results
+        if "speaker" in r.title.lower() or "bluetooth" in r.title.lower()
+    )
     assert speaker_count >= len(results) * 0.5
 
 
@@ -78,6 +81,10 @@ async def test_multiple_categories_searchable(amazon_web):
 
 
 @pytest.mark.asyncio
-async def test_condition_filter(ebay_web):
+async def test_condition_filter_boosts_matching(ebay_web):
+    """Condition is a scoring bonus — matching items should rank first."""
     results = await ebay_web.search("headphones", condition="refurbished")
-    assert isinstance(results, list)
+    assert len(results) > 0
+    # The first result should be the refurbished one (highest score)
+    first_condition = results[0].raw_attributes.get("condition", "").lower()
+    assert "refurbished" in first_condition

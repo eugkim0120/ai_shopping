@@ -30,9 +30,25 @@ COLOUR_WORDS = {
     "neon", "cream",
 }
 
-CONDITION_WORDS = ["like new", "good condition", "refurbished", "used", "new"]
+CONDITION_WORDS = [
+    "like new", "good condition", "refurbished",
+    "secondhand", "second hand", "pre-owned", "preloved",
+    "used", "new",
+]
 
-MATERIAL_WORDS = {"leather", "cotton", "wool", "silk", "denim", "nylon", "rattan", "wood", "metal", "stainless steel"}
+# Map informal condition words to standard ones for filtering
+CONDITION_ALIASES = {
+    "secondhand": "used",
+    "second hand": "used",
+    "pre-owned": "used",
+    "preloved": "used",
+    "vintage": "used",
+}
+
+MATERIAL_WORDS = {
+    "leather", "cotton", "wool", "silk", "denim", "nylon",
+    "rattan", "wood", "metal", "stainless steel",
+}
 
 BRAND_WORDS = {
     "apple", "samsung", "sony", "nike", "adidas", "dyson", "nintendo", "playstation",
@@ -99,8 +115,14 @@ class SearchDetector:
     def _extract_condition(self, text: str, intent: SearchIntent):
         for condition in CONDITION_WORDS:
             if condition in text:
-                intent.condition = condition
+                # Normalize informal terms to standard condition
+                intent.condition = CONDITION_ALIASES.get(
+                    condition, condition,
+                )
                 return
+        # Also check "vintage" as implicit condition
+        if "vintage" in text:
+            intent.condition = "used"
 
     def _extract_brand(self, text: str, intent: SearchIntent):
         for brand in sorted(BRAND_WORDS, key=len, reverse=True):

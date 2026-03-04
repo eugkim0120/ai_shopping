@@ -21,7 +21,11 @@ COLOUR_WORDS = {
     "pink", "grey", "gray", "brown", "silver", "gold", "navy", "beige",
     "cream", "neon",
 }
-SIZE_PATTERN = re.compile(r"\b(XS|S|M|L|XL|XXL|\d+\s*(?:GB|TB|MB|mm|cm|inch|kg|\")|size\s*\d+)\b", re.I)
+SIZE_PATTERN = re.compile(
+    r"\b(XS|S|M|L|XL|XXL|\d+\s*(?:GB|TB|MB|mm|cm|inch|kg|\")"
+    r"|size\s*\d+)\b",
+    re.I,
+)
 BRAND_INDICATORS = {"brand", "manufacturer", "make", "by"}
 
 # Keys from raw_attributes that should be promoted to top-level filter categories

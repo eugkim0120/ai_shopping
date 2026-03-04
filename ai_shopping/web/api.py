@@ -4,6 +4,8 @@ from dataclasses import asdict
 
 from fastapi import APIRouter, Request
 
+from ai_shopping.utils import parse_price
+
 router = APIRouter()
 
 
@@ -26,9 +28,9 @@ async def search(request: Request, q: str = "", sort: str = "relevance", marketp
 
     # Apply sorting
     if sort == "price_asc":
-        items_data.sort(key=lambda x: _parse_price(x.get("price")) or float("inf"))
+        items_data.sort(key=lambda x: parse_price(x.get("price")) or float("inf"))
     elif sort == "price_desc":
-        items_data.sort(key=lambda x: _parse_price(x.get("price")) or 0, reverse=True)
+        items_data.sort(key=lambda x: parse_price(x.get("price")) or 0, reverse=True)
     elif sort == "name_asc":
         items_data.sort(key=lambda x: x.get("title", "").lower())
 
@@ -56,13 +58,3 @@ async def search(request: Request, q: str = "", sort: str = "relevance", marketp
 async def list_marketplaces(request: Request):
     registry = request.app.state.registry
     return {"marketplaces": registry.names()}
-
-
-def _parse_price(price_str: str | None) -> float | None:
-    if not price_str:
-        return None
-    try:
-        cleaned = price_str.replace("£", "").replace("$", "").replace("€", "").replace(",", "").strip()
-        return float(cleaned)
-    except (ValueError, AttributeError):
-        return None

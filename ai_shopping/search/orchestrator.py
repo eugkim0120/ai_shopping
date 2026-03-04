@@ -5,8 +5,8 @@ import logging
 
 from ai_shopping.categorisation.engine import CategorisationEngine
 from ai_shopping.scrapers.base import ScrapedItem
-from ai_shopping.scrapers.web_data import WebDataScraper
 from ai_shopping.scrapers.registry import ScraperRegistry
+from ai_shopping.scrapers.web_data import WebDataScraper
 from ai_shopping.search.detector import SearchDetector, SearchIntent
 
 logger = logging.getLogger(__name__)
@@ -84,7 +84,11 @@ class SearchOrchestrator:
                     demo_count += len(demo_result)
 
             if demo_count > 0:
-                errors = [f"Showing web-sourced results ({demo_count} items) — live scraping unavailable"]
+                msg = (
+                    f"Showing web-sourced results ({demo_count} items)"
+                    " — live scraping unavailable"
+                )
+                errors = [msg]
 
         # Keep relevance order from scrapers (they return items sorted by score)
 
@@ -107,11 +111,3 @@ class SearchOrchestrator:
                     selected.append(scraper)
             return selected if selected else self.registry.all()
         return self.registry.all()
-
-
-def _parse_price(price_str: str) -> float:
-    try:
-        cleaned = price_str.replace("£", "").replace("$", "").replace("€", "").replace(",", "").strip()
-        return float(cleaned)
-    except (ValueError, AttributeError):
-        return float("inf")
