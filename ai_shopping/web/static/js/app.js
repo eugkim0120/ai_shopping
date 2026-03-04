@@ -12,9 +12,12 @@ const resultCount = document.getElementById('resultCount');
 const filtersPanel = document.getElementById('filtersPanel');
 const dynamicFilters = document.getElementById('dynamicFilters');
 const sortSelect = document.getElementById('sortSelect');
+const demoBanner = document.getElementById('demoBanner');
 
 let allItems = [];
+let totalFromServer = 0;
 let currentSort = 'relevance';
+let isDemo = false;
 
 searchForm.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -45,6 +48,13 @@ async function performSearch(query) {
         clearTimeout(timeoutId);
         const data = await resp.json();
         allItems = data.items || [];
+        totalFromServer = data.total || 0;
+
+        isDemo = (data.errors || []).some(e => e.includes('demo data'));
+        if (demoBanner) {
+            demoBanner.classList.toggle('hidden', !isDemo);
+        }
+
         renderResults(data);
         renderFilters(data.filter_options || {});
         renderParsedIntent(data.parsed || {});
@@ -84,10 +94,11 @@ function renderResults(data) {
     resultsGrid.innerHTML = '';
     errorsDiv.classList.add('hidden');
 
-    if (data.errors && data.errors.length > 0) {
-        const isDemo = data.errors.some(e => e.includes('demo data'));
-        errorsDiv.innerHTML = data.errors.map(e =>
-            `<div class="error-line ${isDemo ? 'info' : ''}">${escapeHtml(e)}</div>`
+    // Only show non-demo errors
+    const realErrors = (data.errors || []).filter(e => !e.includes('demo data'));
+    if (realErrors.length > 0) {
+        errorsDiv.innerHTML = realErrors.map(e =>
+            `<div class="error-line">${escapeHtml(e)}</div>`
         ).join('');
         errorsDiv.classList.remove('hidden');
     }
@@ -113,8 +124,17 @@ function renderCards(items) {
     resultsGrid.innerHTML = '';
     let visibleCount = 0;
 
-    items.forEach(item => {
-        // Check if item passes current filters
+    // Apply current sort
+    let sorted = [...items];
+    if (currentSort === 'price_asc') {
+        sorted.sort((a, b) => (parsePrice(a.price) || Infinity) - (parsePrice(b.price) || Infinity));
+    } else if (currentSort === 'price_desc') {
+        sorted.sort((a, b) => (parsePrice(b.price) || 0) - (parsePrice(a.price) || 0));
+    } else if (currentSort === 'name_asc') {
+        sorted.sort((a, b) => (a.title || '').localeCompare(b.title || ''));
+    }
+
+    sorted.forEach(item => {
         if (!passesFilters(item)) return;
 
         visibleCount++;
@@ -122,21 +142,16 @@ function renderCards(items) {
         card.className = 'item-card';
         card.dataset.marketplace = item.marketplace || '';
 
-        // Store all attribute values for filtering
-        if (item.raw_attributes) {
-            Object.entries(item.raw_attributes).forEach(([k, v]) => {
-                card.dataset[`attr_${k.toLowerCase()}`] = v;
-            });
-        }
-
         const attrs = Object.entries(item.raw_attributes || {})
-            .filter(([k]) => k !== 'brand')
+            .filter(([k]) => !['brand', 'condition', 'colour', 'color'].includes(k.toLowerCase()))
             .slice(0, 4)
             .map(([k, v]) => `<span class="attr-tag">${escapeHtml(k)}: ${escapeHtml(v)}</span>`)
             .join('');
 
         const brand = item.raw_attributes?.brand;
         const condition = item.raw_attributes?.condition;
+        const colour = item.raw_attributes?.colour || item.raw_attributes?.color;
+        const isExternal = item.url && !item.url.includes('example.com');
 
         card.innerHTML = `
             <a href="${item.url}" target="_blank" rel="noopener">
@@ -151,7 +166,10 @@ function renderCards(items) {
                     </div>
                     ${brand ? `<div class="item-brand">${escapeHtml(brand)}</div>` : ''}
                     <h3 class="item-title">${escapeHtml(item.title)}</h3>
-                    ${item.price ? `<div class="item-price">${escapeHtml(item.price)}</div>` : ''}
+                    <div class="item-price-row">
+                        ${item.price ? `<span class="item-price">${escapeHtml(item.price)}</span>` : ''}
+                        ${colour ? `<span class="item-colour-dot" title="${escapeHtml(colour)}">${escapeHtml(colour)}</span>` : ''}
+                    </div>
                     ${attrs ? `<div class="item-attrs">${attrs}</div>` : ''}
                 </div>
             </a>
@@ -159,13 +177,11 @@ function renderCards(items) {
         resultsGrid.appendChild(card);
     });
 
-    // Update visible count
-    resultCount.textContent = `${visibleCount} result${visibleCount !== 1 ? 's' : ''}`;
+    resultCount.textContent = `${visibleCount} of ${totalFromServer} result${totalFromServer !== 1 ? 's' : ''}`;
 }
 
 function passesFilters(item) {
     const checkboxes = dynamicFilters.querySelectorAll('input[type="checkbox"]');
-    // Group checkboxes by category
     const filterState = {};
     checkboxes.forEach(cb => {
         const cat = cb.dataset.category;
@@ -178,10 +194,10 @@ function passesFilters(item) {
     });
 
     for (const [category, state] of Object.entries(filterState)) {
-        if (state.unchecked.length === 0) continue; // All checked = no filter
+        if (state.unchecked.length === 0) continue;
 
         const itemValues = getItemValuesForCategory(item, category);
-        if (itemValues.length === 0) continue; // Item has no value for this category — show it
+        if (itemValues.length === 0) continue;
 
         const hasMatch = itemValues.some(v => state.checked.includes(v));
         if (!hasMatch) return false;
@@ -200,7 +216,6 @@ function getItemValuesForCategory(item, category) {
         return values;
     }
 
-    // Check raw_attributes
     if (item.raw_attributes) {
         for (const [k, v] of Object.entries(item.raw_attributes)) {
             if (k.toLowerCase() === category.toLowerCase()) {
@@ -209,7 +224,6 @@ function getItemValuesForCategory(item, category) {
         }
     }
 
-    // Check title for colour matches
     if (category === 'colour') {
         const colours = ['Black', 'White', 'Red', 'Blue', 'Green', 'Yellow', 'Orange', 'Purple',
                          'Pink', 'Grey', 'Gray', 'Brown', 'Silver', 'Gold', 'Navy', 'Beige', 'Cream', 'Neon'];
@@ -234,6 +248,18 @@ function renderFilters(filterOptions) {
     }
 
     filtersPanel.classList.remove('hidden');
+
+    // Add clear filters button
+    const clearBtn = document.createElement('button');
+    clearBtn.className = 'clear-filters-btn';
+    clearBtn.textContent = 'Clear All Filters';
+    clearBtn.addEventListener('click', () => {
+        dynamicFilters.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+            cb.checked = true;
+        });
+        renderCards(allItems);
+    });
+    dynamicFilters.appendChild(clearBtn);
 
     keys.forEach(category => {
         const values = filterOptions[category];
@@ -285,6 +311,7 @@ function showLoading() {
     searchMeta.classList.add('hidden');
     filtersPanel.classList.add('hidden');
     errorsDiv.classList.add('hidden');
+    if (demoBanner) demoBanner.classList.add('hidden');
 }
 
 function hideLoading() {

@@ -101,25 +101,60 @@ _CATALOGUES: dict[str, list[dict]] = {
 }
 
 
+STOP_WORDS = {"the", "a", "an", "and", "or", "for", "with", "on", "in", "to", "of", "is", "it"}
+
+# Minimum percentage of query words that must match for an item to be included
+MIN_MATCH_RATIO = 0.4
+
+
 def _score_item(item: dict, query_words: list[str], colour: str | None, condition: str | None) -> float:
-    """Score how well an item matches the search query."""
+    """Score how well an item matches the search query. Returns 0 for irrelevant items."""
     title_lower = item["title"].lower()
-    attrs_text = " ".join(item.get("attrs", {}).values()).lower()
-    full_text = f"{title_lower} {attrs_text}"
+    title_words = set(title_lower.split())
+    attrs = item.get("attrs", {})
+    attrs_text = " ".join(attrs.values()).lower()
+    attrs_words = set(attrs_text.split())
+    all_words = title_words | attrs_words
+
+    # Filter out stop words from query
+    meaningful_words = [w for w in query_words if w not in STOP_WORDS]
+    if not meaningful_words:
+        return 0.0
 
     score = 0.0
-    for word in query_words:
-        if word in title_lower:
-            score += 2.0
-        elif word in attrs_text:
-            score += 1.0
+    matches = 0
+    for word in meaningful_words:
+        # Require word boundary matching — word must appear as a standalone token
+        # or as a prefix of a token (e.g. "headphone" matches "headphones")
+        title_match = any(w.startswith(word) or word.startswith(w) for w in title_words if len(w) > 2)
+        attrs_match = any(w.startswith(word) or word.startswith(w) for w in attrs_words if len(w) > 2)
 
-    if colour and colour.lower() in full_text:
-        score += 1.5
+        if title_match:
+            score += 2.0
+            matches += 1
+        elif attrs_match:
+            score += 1.0
+            matches += 1
+
+    # Multi-word phrase bonus: if 2+ consecutive words match in title, big bonus
+    if len(meaningful_words) >= 2:
+        for i in range(len(meaningful_words) - 1):
+            phrase = f"{meaningful_words[i]} {meaningful_words[i+1]}"
+            if phrase in title_lower:
+                score += 3.0
+
+    # Require minimum match ratio
+    match_ratio = matches / len(meaningful_words) if meaningful_words else 0
+    if match_ratio < MIN_MATCH_RATIO:
+        return 0.0
+
+    # Colour and condition as bonus (not core relevance)
+    if colour and colour.lower() in attrs_text:
+        score += 1.0
     if condition:
-        item_cond = item.get("attrs", {}).get("condition", "").lower()
-        if condition.lower() in item_cond or condition.lower() in title_lower:
-            score += 1.5
+        item_cond = attrs.get("condition", "").lower()
+        if condition.lower() in item_cond:
+            score += 1.0
 
     return score
 

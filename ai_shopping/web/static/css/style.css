@@ -380,10 +380,26 @@ body {
     overflow: hidden;
 }
 
+.item-price-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 4px;
+}
+
 .item-price {
     font-size: 1.2rem;
     font-weight: 700;
     color: var(--success);
+}
+
+.item-colour-dot {
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 10px;
+    background: var(--bg-input);
+    color: var(--text-muted);
+    border: 1px solid var(--border);
 }
 
 .item-attrs {
@@ -451,6 +467,36 @@ body {
 .errors:has(.info) {
     background: rgba(59, 130, 246, 0.08);
     border-color: rgba(59, 130, 246, 0.25);
+}
+
+/* Demo Banner */
+.demo-banner {
+    background: rgba(245, 158, 11, 0.1);
+    border-bottom: 1px solid rgba(245, 158, 11, 0.3);
+    color: var(--warning);
+    text-align: center;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Clear Filters */
+.clear-filters-btn {
+    width: 100%;
+    padding: 8px 12px;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all var(--transition);
+    margin-bottom: 16px;
+}
+
+.clear-filters-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
 }
 
 .hidden {

@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-03-04T18:38:54.780449",
-  "base_url": "http://127.0.0.1:8000",
+  "timestamp": "2026-03-04T18:43:43.876575",
+  "base_url": "http://127.0.0.1:8001",
   "results": [
     {
       "query": "wireless headphones",
@@ -45,15 +45,15 @@
         "type": 1,
         "connectivity": 1
       },
-      "elapsed_s": 0.48,
+      "elapsed_s": 0.47,
       "success": true
     },
     {
       "query": "iPhone 15 Pro Max",
       "status": 200,
-      "total": 10,
+      "total": 3,
       "errors": [
-        "Using demo data (10 items) \u2014 live scrapers unavailable"
+        "Using demo data (3 items) \u2014 live scrapers unavailable"
       ],
       "parsed_query": "iphone 15 pro max",
       "parsed_filters": {
@@ -68,35 +68,28 @@
       },
       "items_sample": [
         {
-          "title": "Optimum Nutrition Gold Standard Whey Protein Chocolate 2.27k",
-          "price": "\u00a344.99",
+          "title": "iPhone 14 Pro 128GB Space Black - Good Condition",
+          "price": "\u00a3550.00",
+          "marketplace": "gumtree"
+        },
+        {
+          "title": "iPhone 15 Pro Max 256GB Blue Titanium - Unlocked USED",
+          "price": "\u00a3849.00",
+          "marketplace": "ebay"
+        },
+        {
+          "title": "Apple iPhone 15 Pro Max 256GB Natural Titanium",
+          "price": "\u00a31,199.00",
           "marketplace": "amazon"
-        },
-        {
-          "title": "MyProtein Impact Whey Protein Chocolate Smooth 5kg",
-          "price": "\u00a352.99",
-          "marketplace": "ebay"
-        },
-        {
-          "title": "Manduka PRO Yoga Mat 6mm - Black",
-          "price": "\u00a389.00",
-          "marketplace": "ebay"
         }
       ],
       "filter_options": {
         "marketplace": 3,
-        "brand": 7,
-        "condition": 3,
-        "colour": 7,
-        "size": 1,
-        "type": 2,
-        "size_or_spec": 7,
-        "storage": 2,
-        "flavour": 1,
-        "weight": 2,
-        "thickness": 1,
-        "capacity": 1,
-        "connectivity": 1
+        "brand": 1,
+        "condition": 2,
+        "colour": 3,
+        "size_or_spec": 2,
+        "storage": 2
       },
       "elapsed_s": 0.03,
       "success": true
@@ -104,9 +97,9 @@
     {
       "query": "running shoes size 10",
       "status": 200,
-      "total": 13,
+      "total": 2,
       "errors": [
-        "Using demo data (13 items) \u2014 live scrapers unavailable"
+        "Using demo data (2 items) \u2014 live scrapers unavailable"
       ],
       "parsed_query": "running shoes size 10",
       "parsed_filters": {
@@ -121,31 +114,24 @@
       },
       "items_sample": [
         {
-          "title": "Yoga Mat 10mm Thick Blue with Carry Strap",
-          "price": "\u00a312.00",
-          "marketplace": "gumtree"
-        },
-        {
-          "title": "JBL Tune 510BT Wireless Headphones Blue",
-          "price": "\u00a318.00",
-          "marketplace": "vinted"
-        },
-        {
-          "title": "Wrangler Texas Men's Jeans Blue Size 32x32",
-          "price": "\u00a339.99",
+          "title": "Adidas Ultraboost 22 Running Shoes Black Size 10",
+          "price": "\u00a389.99",
           "marketplace": "ebay"
+        },
+        {
+          "title": "Nike Air Max 90 Men's Running Shoes - White/Black Size 10",
+          "price": "\u00a3129.99",
+          "marketplace": "amazon"
         }
       ],
       "filter_options": {
-        "marketplace": 4,
-        "brand": 9,
-        "condition": 4,
-        "colour": 6,
-        "size": 6,
-        "type": 3,
-        "size_or_spec": 8,
-        "thickness": 1,
-        "connectivity": 1
+        "marketplace": 2,
+        "brand": 2,
+        "condition": 1,
+        "colour": 2,
+        "size": 1,
+        "type": 1,
+        "size_or_spec": 2
       },
       "elapsed_s": 0.03,
       "success": true
@@ -153,9 +139,9 @@
     {
       "query": "black winter jacket under \u00a380",
       "status": 200,
-      "total": 7,
+      "total": 2,
       "errors": [
-        "Using demo data (7 items) \u2014 live scrapers unavailable"
+        "Using demo data (2 items) \u2014 live scrapers unavailable"
       ],
       "parsed_query": "black winter jacket",
       "parsed_filters": {
@@ -170,31 +156,23 @@
       },
       "items_sample": [
         {
-          "title": "Zara Leather Tote Handbag Black",
-          "price": "\u00a328.00",
-          "marketplace": "vinted"
-        },
-        {
-          "title": "Superdry Winter Coat Women's Grey Size S",
-          "price": "\u00a340.00",
-          "marketplace": "vinted"
-        },
-        {
-          "title": "Cosori Air Fryer 5.5L Black",
+          "title": "Columbia Winter Puffer Jacket Navy Size M",
           "price": "\u00a345.00",
-          "marketplace": "gumtree"
+          "marketplace": "vinted"
+        },
+        {
+          "title": "North Face Winter Jacket Black Size L",
+          "price": "\u00a365.00",
+          "marketplace": "vinted"
         }
       ],
       "filter_options": {
-        "marketplace": 2,
-        "brand": 7,
-        "condition": 1,
-        "colour": 4,
-        "material": 1,
-        "size": 4,
-        "type": 3,
-        "size_or_spec": 5,
-        "capacity": 1
+        "marketplace": 1,
+        "brand": 2,
+        "colour": 2,
+        "size": 2,
+        "type": 1,
+        "size_or_spec": 2
       },
       "elapsed_s": 0.03,
       "success": true
@@ -202,9 +180,9 @@
     {
       "query": "Samsung Galaxy S24 used",
       "status": 200,
-      "total": 10,
+      "total": 3,
       "errors": [
-        "Using demo data (10 items) \u2014 live scrapers unavailable"
+        "Using demo data (3 items) \u2014 live scrapers unavailable"
       ],
       "parsed_query": "samsung galaxy s24",
       "parsed_filters": {
@@ -219,33 +197,30 @@
       },
       "items_sample": [
         {
-          "title": "Men's Casio Watch Gold Tone Vintage",
-          "price": "\u00a335.00",
+          "title": "Samsung Galaxy S23 Cream 256GB Unlocked",
+          "price": "\u00a3380.00",
           "marketplace": "gumtree"
         },
         {
-          "title": "Nike Dunk Low Panda Size 10 - Used",
-          "price": "\u00a375.00",
-          "marketplace": "vinted"
+          "title": "Samsung Galaxy S24 128GB - Refurbished Good",
+          "price": "\u00a3449.99",
+          "marketplace": "ebay"
         },
         {
-          "title": "Sony WH-1000XM4 Headphones Barely Used",
-          "price": "\u00a3150.00",
-          "marketplace": "gumtree"
+          "title": "Samsung Galaxy S24 Ultra 256GB Titanium Black Unlocked",
+          "price": "\u00a31,149.00",
+          "marketplace": "amazon"
         }
       ],
       "filter_options": {
-        "marketplace": 4,
-        "brand": 6,
-        "condition": 3,
-        "colour": 7,
-        "size": 2,
-        "type": 2,
-        "size_or_spec": 5,
-        "storage": 2,
-        "resolution": 1
+        "marketplace": 3,
+        "brand": 1,
+        "condition": 2,
+        "colour": 2,
+        "size_or_spec": 2,
+        "storage": 2
       },
-      "elapsed_s": 0.03,
+      "elapsed_s": 0.04,
       "success": true
     },
     {
@@ -297,9 +272,9 @@
     {
       "query": "yoga mat",
       "status": 200,
-      "total": 4,
+      "total": 3,
       "errors": [
-        "Using demo data (4 items) \u2014 live scrapers unavailable"
+        "Using demo data (3 items) \u2014 live scrapers unavailable"
       ],
       "parsed_query": "yoga mat",
       "parsed_filters": {
@@ -331,10 +306,9 @@
       ],
       "filter_options": {
         "marketplace": 3,
-        "brand": 3,
-        "colour": 4,
-        "type": 1,
-        "size_or_spec": 3,
+        "brand": 2,
+        "colour": 3,
+        "size_or_spec": 2,
         "thickness": 2
       },
       "elapsed_s": 0.03,
@@ -429,9 +403,9 @@
     {
       "query": "desk lamp LED",
       "status": 200,
-      "total": 4,
+      "total": 2,
       "errors": [
-        "Using demo data (4 items) \u2014 live scrapers unavailable"
+        "Using demo data (2 items) \u2014 live scrapers unavailable"
       ],
       "parsed_query": "desk lamp led",
       "parsed_filters": {
@@ -454,21 +428,14 @@
           "title": "LED Desk Lamp with USB Charging Port - Dimmable White",
           "price": "\u00a329.99",
           "marketplace": "amazon"
-        },
-        {
-          "title": "Nintendo Switch OLED Neon - Boxed Like New",
-          "price": "\u00a3269.00",
-          "marketplace": "ebay"
         }
       ],
       "filter_options": {
         "marketplace": 2,
-        "brand": 2,
-        "condition": 1,
-        "colour": 3,
+        "brand": 1,
+        "colour": 2,
         "type": 1,
-        "feature": 1,
-        "storage": 1
+        "feature": 1
       },
       "elapsed_s": 0.03,
       "success": true
@@ -517,9 +484,9 @@
     {
       "query": "women's handbag leather",
       "status": 200,
-      "total": 5,
+      "total": 4,
       "errors": [
-        "Using demo data (5 items) \u2014 live scrapers unavailable"
+        "Using demo data (4 items) \u2014 live scrapers unavailable"
       ],
       "parsed_query": "women's handbag leather",
       "parsed_filters": {
@@ -544,19 +511,18 @@
           "marketplace": "vinted"
         },
         {
-          "title": "Superdry Winter Coat Women's Grey Size S",
-          "price": "\u00a340.00",
-          "marketplace": "vinted"
+          "title": "Coach Leather Handbag Black - Genuine",
+          "price": "\u00a395.00",
+          "marketplace": "gumtree"
         }
       ],
       "filter_options": {
         "marketplace": 3,
-        "brand": 5,
-        "colour": 3,
+        "brand": 4,
+        "colour": 2,
         "material": 2,
-        "size": 1,
         "type": 1,
-        "size_or_spec": 3
+        "size_or_spec": 1
       },
       "elapsed_s": 0.03,
       "success": true
@@ -564,9 +530,9 @@
     {
       "query": "4K monitor 27 inch",
       "status": 200,
-      "total": 8,
+      "total": 4,
       "errors": [
-        "Using demo data (8 items) \u2014 live scrapers unavailable"
+        "Using demo data (4 items) \u2014 live scrapers unavailable"
       ],
       "parsed_query": "4k monitor 27 inch",
       "parsed_filters": {
@@ -581,31 +547,28 @@
       },
       "items_sample": [
         {
-          "title": "Kids Bicycle 20 Inch Blue - Collection Only",
-          "price": "\u00a340.00",
-          "marketplace": "gumtree"
-        },
-        {
-          "title": "Optimum Nutrition Gold Standard Whey Protein Chocolate 2.27k",
-          "price": "\u00a344.99",
-          "marketplace": "amazon"
-        },
-        {
-          "title": "Kids Balance Bicycle 12 inch Pink",
-          "price": "\u00a349.99",
+          "title": "Dell S2722QC 27\" 4K USB-C Monitor",
+          "price": "\u00a3279.99",
           "marketplace": "ebay"
+        },
+        {
+          "title": "BenQ EW3270U 32\" 4K HDR Monitor",
+          "price": "\u00a3329.99",
+          "marketplace": "ebay"
+        },
+        {
+          "title": "LG 27GP850-B 27 Inch QHD Nano IPS Gaming Monitor",
+          "price": "\u00a3349.99",
+          "marketplace": "amazon"
         }
       ],
       "filter_options": {
-        "marketplace": 3,
-        "brand": 6,
-        "colour": 5,
-        "size": 5,
-        "type": 1,
-        "size_or_spec": 6,
+        "marketplace": 2,
+        "brand": 4,
+        "colour": 1,
+        "size": 2,
         "resolution": 2,
-        "flavour": 1,
-        "weight": 1,
+        "size_or_spec": 2,
         "panel": 1
       },
       "elapsed_s": 0.03,
@@ -614,9 +577,9 @@
     {
       "query": "air fryer",
       "status": 200,
-      "total": 8,
+      "total": 6,
       "errors": [
-        "Using demo data (8 items) \u2014 live scrapers unavailable"
+        "Using demo data (6 items) \u2014 live scrapers unavailable"
       ],
       "parsed_query": "air fryer",
       "parsed_filters": {
@@ -641,22 +604,20 @@
           "marketplace": "gumtree"
         },
         {
-          "title": "IKEA MARKUS Office Chair Black",
-          "price": "\u00a380.00",
-          "marketplace": "gumtree"
+          "title": "Ninja AF300UK Air Fryer MAX 5.2L - Grey",
+          "price": "\u00a399.99",
+          "marketplace": "amazon"
         }
       ],
       "filter_options": {
         "marketplace": 3,
-        "brand": 6,
+        "brand": 5,
         "condition": 1,
         "colour": 3,
-        "material": 1,
         "size": 2,
-        "type": 3,
+        "type": 1,
         "size_or_spec": 5,
         "capacity": 3,
-        "pieces": 1,
         "connectivity": 1
       },
       "elapsed_s": 0.03,
@@ -665,9 +626,9 @@
     {
       "query": "garden furniture set",
       "status": 200,
-      "total": 4,
+      "total": 3,
       "errors": [
-        "Using demo data (4 items) \u2014 live scrapers unavailable"
+        "Using demo data (3 items) \u2014 live scrapers unavailable"
       ],
       "parsed_query": "garden furniture set",
       "parsed_filters": {
@@ -687,22 +648,22 @@
           "marketplace": "gumtree"
         },
         {
-          "title": "Michael Kors Jet Set Travel Leather Handbag - Brown",
-          "price": "\u00a3159.00",
-          "marketplace": "ebay"
-        },
-        {
           "title": "Rattan Garden Furniture Set 5 Piece Brown",
           "price": "\u00a3299.99",
           "marketplace": "ebay"
+        },
+        {
+          "title": "Keter Garden Furniture Set 4 Piece - Graphite",
+          "price": "\u00a3399.99",
+          "marketplace": "amazon"
         }
       ],
       "filter_options": {
         "marketplace": 3,
-        "brand": 2,
+        "brand": 1,
         "colour": 2,
-        "material": 3,
-        "type": 2,
+        "material": 2,
+        "type": 1,
         "pieces": 2
       },
       "elapsed_s": 0.03,
@@ -750,9 +711,9 @@
     {
       "query": "blue jeans size 32",
       "status": 200,
-      "total": 18,
+      "total": 3,
       "errors": [
-        "Using demo data (18 items) \u2014 live scrapers unavailable"
+        "Using demo data (3 items) \u2014 live scrapers unavailable"
       ],
       "parsed_query": "blue jeans size 32",
       "parsed_filters": {
@@ -767,33 +728,28 @@
       },
       "items_sample": [
         {
-          "title": "Yoga Mat 10mm Thick Blue with Carry Strap",
-          "price": "\u00a312.00",
-          "marketplace": "gumtree"
-        },
-        {
-          "title": "JBL Tune 510BT Wireless Headphones Blue",
-          "price": "\u00a318.00",
-          "marketplace": "vinted"
-        },
-        {
           "title": "Levi's 511 Slim Fit Jeans Blue 32W",
           "price": "\u00a322.00",
           "marketplace": "vinted"
+        },
+        {
+          "title": "Wrangler Texas Men's Jeans Blue Size 32x32",
+          "price": "\u00a339.99",
+          "marketplace": "ebay"
+        },
+        {
+          "title": "Levi's 501 Original Fit Men's Jeans - Blue Size 32",
+          "price": "\u00a369.99",
+          "marketplace": "amazon"
         }
       ],
       "filter_options": {
-        "marketplace": 4,
-        "brand": 12,
-        "condition": 4,
-        "colour": 6,
-        "size": 8,
-        "type": 4,
-        "size_or_spec": 11,
-        "connectivity": 2,
-        "resolution": 1,
-        "thickness": 1,
-        "storage": 1
+        "marketplace": 3,
+        "brand": 2,
+        "colour": 1,
+        "size": 1,
+        "type": 1,
+        "size_or_spec": 2
       },
       "elapsed_s": 0.03,
       "success": true
@@ -801,9 +757,9 @@
     {
       "query": "Dyson vacuum cleaner refurbished",
       "status": 200,
-      "total": 3,
+      "total": 2,
       "errors": [
-        "Using demo data (3 items) \u2014 live scrapers unavailable"
+        "Using demo data (2 items) \u2014 live scrapers unavailable"
       ],
       "parsed_query": "dyson vacuum cleaner",
       "parsed_filters": {
@@ -823,11 +779,6 @@
           "marketplace": "ebay"
         },
         {
-          "title": "Samsung Galaxy S24 128GB - Refurbished Good",
-          "price": "\u00a3449.99",
-          "marketplace": "ebay"
-        },
-        {
           "title": "Dyson V15 Detect Absolute Cordless Vacuum Cleaner",
           "price": "\u00a3599.99",
           "marketplace": "amazon"
@@ -835,12 +786,10 @@
       ],
       "filter_options": {
         "marketplace": 2,
-        "brand": 2,
+        "brand": 1,
         "condition": 2,
         "colour": 2,
-        "type": 1,
-        "size_or_spec": 1,
-        "storage": 1
+        "type": 1
       },
       "elapsed_s": 0.03,
       "success": true
@@ -936,7 +885,7 @@
     "searches_with_results": 20,
     "total_scraper_errors": 20,
     "avg_response_time_s": 0.05,
-    "max_response_time_s": 0.48,
+    "max_response_time_s": 0.47,
     "min_response_time_s": 0.01
   }
 }
