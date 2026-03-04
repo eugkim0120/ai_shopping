@@ -1,0 +1,96 @@
+"""Search intent detector — parses natural language queries into structured search."""
+
+import re
+from dataclasses import dataclass, field
+
+
+@dataclass
+class SearchIntent:
+    """Parsed search intent from a natural language query."""
+
+    query: str
+    min_price: float | None = None
+    max_price: float | None = None
+    colour: str | None = None
+    brand: str | None = None
+    condition: str | None = None
+    marketplaces: list[str] = field(default_factory=list)
+    raw_query: str = ""
+
+
+PRICE_UNDER = re.compile(r"(?:under|below|less than|max|up to)\s*[£$€]?\s*([\d,]+)", re.I)
+PRICE_OVER = re.compile(r"(?:over|above|more than|min|at least)\s*[£$€]?\s*([\d,]+)", re.I)
+PRICE_RANGE = re.compile(r"[£$€]?\s*([\d,]+)\s*[-–to]+\s*[£$€]?\s*([\d,]+)", re.I)
+COLOUR_WORDS = {
+    "black", "white", "red", "blue", "green", "yellow", "orange", "purple",
+    "pink", "grey", "gray", "brown", "silver", "gold", "navy",
+}
+CONDITION_WORDS = {"new", "used", "refurbished", "like new", "good condition"}
+MARKETPLACE_ALIASES = {
+    "amazon": "amazon", "ebay": "ebay", "gumtree": "gumtree",
+    "facebook": "facebook_marketplace", "fb marketplace": "facebook_marketplace",
+    "fb": "facebook_marketplace", "vinted": "vinted",
+}
+
+
+class SearchDetector:
+    """Parses a natural language search query into structured filters."""
+
+    def parse(self, raw_query: str) -> SearchIntent:
+        intent = SearchIntent(query=raw_query, raw_query=raw_query)
+        text = raw_query.lower()
+
+        self._extract_prices(text, intent)
+        self._extract_colour(text, intent)
+        self._extract_condition(text, intent)
+        self._extract_marketplaces(text, intent)
+        intent.query = self._clean_query(text, intent)
+
+        return intent
+
+    def _extract_prices(self, text: str, intent: SearchIntent):
+        range_match = PRICE_RANGE.search(text)
+        if range_match:
+            intent.min_price = float(range_match.group(1).replace(",", ""))
+            intent.max_price = float(range_match.group(2).replace(",", ""))
+            return
+
+        under_match = PRICE_UNDER.search(text)
+        if under_match:
+            intent.max_price = float(under_match.group(1).replace(",", ""))
+
+        over_match = PRICE_OVER.search(text)
+        if over_match:
+            intent.min_price = float(over_match.group(1).replace(",", ""))
+
+    def _extract_colour(self, text: str, intent: SearchIntent):
+        for colour in COLOUR_WORDS:
+            if re.search(rf"\b{colour}\b", text):
+                intent.colour = colour
+                return
+
+    def _extract_condition(self, text: str, intent: SearchIntent):
+        for condition in CONDITION_WORDS:
+            if condition in text:
+                intent.condition = condition
+                return
+
+    def _extract_marketplaces(self, text: str, intent: SearchIntent):
+        for alias, name in MARKETPLACE_ALIASES.items():
+            if alias in text:
+                if name not in intent.marketplaces:
+                    intent.marketplaces.append(name)
+
+    def _clean_query(self, text: str, intent: SearchIntent) -> str:
+        cleaned = text
+        for pattern in [PRICE_UNDER, PRICE_OVER, PRICE_RANGE]:
+            cleaned = pattern.sub("", cleaned)
+        if intent.colour:
+            cleaned = re.sub(rf"\b{intent.colour}\b", "", cleaned)
+        if intent.condition:
+            cleaned = cleaned.replace(intent.condition, "")
+        for alias in MARKETPLACE_ALIASES:
+            cleaned = cleaned.replace(alias, "")
+        cleaned = re.sub(r"\b(on|from|in|the|a|an)\b", "", cleaned)
+        cleaned = re.sub(r"\s+", " ", cleaned).strip()
+        return cleaned
