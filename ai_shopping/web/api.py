@@ -8,12 +8,19 @@ router = APIRouter()
 
 
 @router.get("/search")
-async def search(request: Request, q: str = "", sort: str = "relevance"):
+async def search(request: Request, q: str = "", sort: str = "relevance", marketplaces: str = ""):
     if not q.strip():
         return {"items": [], "filter_options": {}, "total": 0, "errors": []}
 
+    # Append marketplace filter to query if specified via URL param
+    query = q
+    if marketplaces:
+        mp_list = [m.strip() for m in marketplaces.split(",") if m.strip()]
+        if mp_list:
+            query = f"{q} on {','.join(mp_list)}"
+
     orchestrator = request.app.state.orchestrator
-    result = await orchestrator.search(q)
+    result = await orchestrator.search(query)
 
     items_data = [asdict(item) for item in result["items"]]
 

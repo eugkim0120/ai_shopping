@@ -1,0 +1,1083 @@
+{
+  "timestamp": "2026-03-04T19:06:33.390458",
+  "base_url": "http://127.0.0.1:8000",
+  "results": [
+    {
+      "query": "bluetooth speaker portable",
+      "status": 200,
+      "total": 8,
+      "errors": [
+        "Showing web-sourced results (8 items) \u2014 live scraping unavailable"
+      ],
+      "parsed_query": "bluetooth speaker portable",
+      "parsed_filters": {
+        "min_price": null,
+        "max_price": null,
+        "colour": null,
+        "brand": null,
+        "condition": null,
+        "material": null,
+        "size": null,
+        "marketplaces": []
+      },
+      "items_sample": [
+        {
+          "title": "JBL Flip 7 Portable Bluetooth Speaker - Black",
+          "price": "\u00a3129.99",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "Sony SRS-XB100 Portable Bluetooth Speaker - Orange",
+          "price": "\u00a339.99",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "Bose SoundLink Flex 2nd Gen Bluetooth Speaker - Blue",
+          "price": "\u00a3149.99",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "Anker Soundcore Motion Boom Plus Bluetooth Speaker",
+          "price": "\u00a399.99",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "JBL Charge 5 Portable Bluetooth Speaker - Teal",
+          "price": "\u00a3109.99",
+          "marketplace": "ebay"
+        }
+      ],
+      "filter_options": {
+        "marketplace": 3,
+        "brand": 5,
+        "condition": 2,
+        "colour": 6,
+        "type": 1,
+        "connectivity": 1
+      },
+      "elapsed_s": 0.5,
+      "success": true
+    },
+    {
+      "query": "robot vacuum cleaner",
+      "status": 200,
+      "total": 6,
+      "errors": [
+        "Showing web-sourced results (6 items) \u2014 live scraping unavailable"
+      ],
+      "parsed_query": "robot vacuum cleaner",
+      "parsed_filters": {
+        "min_price": null,
+        "max_price": null,
+        "colour": null,
+        "brand": null,
+        "condition": null,
+        "material": null,
+        "size": null,
+        "marketplaces": []
+      },
+      "items_sample": [
+        {
+          "title": "Roborock Qrevo Curv 2 Pro Robot Vacuum with Mopping",
+          "price": "\u00a31,199.99",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "Shark IQ Robot Vacuum RV1001AE with Self-Empty Base",
+          "price": "\u00a3349.99",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "Eufy RoboVac 11S Robot Vacuum Cleaner - Black",
+          "price": "\u00a3129.99",
+          "marketplace": "ebay"
+        },
+        {
+          "title": "iRobot Roomba i7+ Robot Vacuum with Auto Empty Base - Refurbished",
+          "price": "\u00a3229.99",
+          "marketplace": "ebay"
+        },
+        {
+          "title": "Roborock S8 Pro Ultra Robot Vacuum - White",
+          "price": "\u00a3649.99",
+          "marketplace": "ebay"
+        }
+      ],
+      "filter_options": {
+        "marketplace": 3,
+        "brand": 4,
+        "condition": 3,
+        "colour": 2,
+        "type": 1
+      },
+      "elapsed_s": 0.03,
+      "success": true
+    },
+    {
+      "query": "mechanical keyboard",
+      "status": 200,
+      "total": 6,
+      "errors": [
+        "Showing web-sourced results (6 items) \u2014 live scraping unavailable"
+      ],
+      "parsed_query": "mechanical keyboard",
+      "parsed_filters": {
+        "min_price": null,
+        "max_price": null,
+        "colour": null,
+        "brand": null,
+        "condition": null,
+        "material": null,
+        "size": null,
+        "marketplaces": []
+      },
+      "items_sample": [
+        {
+          "title": "Keychron V5 Max Wireless Mechanical Keyboard",
+          "price": "\u00a389.99",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "Razer BlackWidow V4 Mechanical Gaming Keyboard - Black",
+          "price": "\u00a3169.99",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "Corsair K55 RGB Gaming Keyboard - Black",
+          "price": "\u00a334.99",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "Corsair K70 RGB Pro Mechanical Keyboard Cherry MX Red - Used",
+          "price": "\u00a379.99",
+          "marketplace": "ebay"
+        },
+        {
+          "title": "Ducky One 3 TKL Mechanical Keyboard - White",
+          "price": "\u00a3109.99",
+          "marketplace": "ebay"
+        }
+      ],
+      "filter_options": {
+        "marketplace": 3,
+        "brand": 4,
+        "condition": 3,
+        "colour": 4,
+        "type": 1,
+        "connectivity": 1
+      },
+      "elapsed_s": 0.03,
+      "success": true
+    },
+    {
+      "query": "mens leather wallet",
+      "status": 200,
+      "total": 7,
+      "errors": [
+        "Showing web-sourced results (7 items) \u2014 live scraping unavailable"
+      ],
+      "parsed_query": "mens leather wallet",
+      "parsed_filters": {
+        "min_price": null,
+        "max_price": null,
+        "colour": null,
+        "brand": null,
+        "condition": null,
+        "material": "leather",
+        "size": null,
+        "marketplaces": []
+      },
+      "items_sample": [
+        {
+          "title": "TEEHON Slim Leather Wallet for Men - Black/Orange RFID Blocking",
+          "price": "\u00a315.99",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "LORZOR Trifold Leather Wallet Men Full-Grain - Brown",
+          "price": "\u00a339.99",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "Tommy Hilfiger Men's Leather Wallet Bifold - Black",
+          "price": "\u00a334.99",
+          "marketplace": "ebay"
+        },
+        {
+          "title": "Hugo Boss Men's Leather Card Holder Wallet - Brown",
+          "price": "\u00a355.00",
+          "marketplace": "ebay"
+        },
+        {
+          "title": "Ted Baker Men's Leather Wallet Brown",
+          "price": "\u00a320.00",
+          "marketplace": "gumtree"
+        }
+      ],
+      "filter_options": {
+        "marketplace": 4,
+        "brand": 7,
+        "condition": 3,
+        "colour": 2,
+        "material": 1,
+        "type": 1,
+        "size_or_spec": 1
+      },
+      "elapsed_s": 0.03,
+      "success": true
+    },
+    {
+      "query": "fitness tracker smartwatch",
+      "status": 200,
+      "total": 7,
+      "errors": [
+        "Showing web-sourced results (7 items) \u2014 live scraping unavailable"
+      ],
+      "parsed_query": "fitness tracker smartwatch",
+      "parsed_filters": {
+        "min_price": null,
+        "max_price": null,
+        "colour": null,
+        "brand": null,
+        "condition": null,
+        "material": null,
+        "size": null,
+        "marketplaces": []
+      },
+      "items_sample": [
+        {
+          "title": "Xiaomi Smart Band 10 Fitness Tracker - Black",
+          "price": "\u00a339.99",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "Samsung Galaxy Fit 3 Fitness Tracker - Silver",
+          "price": "\u00a349.99",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "Fitbit Charge 6 Advanced Fitness Tracker - Black",
+          "price": "\u00a3129.99",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "Xiaomi Smart Band 9 Fitness Tracker - Champagne",
+          "price": "\u00a328.99",
+          "marketplace": "ebay"
+        },
+        {
+          "title": "Huawei Watch Fit 4 Fitness Smartwatch - Black",
+          "price": "\u00a3109.99",
+          "marketplace": "ebay"
+        }
+      ],
+      "filter_options": {
+        "marketplace": 4,
+        "brand": 5,
+        "condition": 3,
+        "colour": 4,
+        "type": 1
+      },
+      "elapsed_s": 0.04,
+      "success": true
+    },
+    {
+      "query": "wireless earbuds noise cancelling",
+      "status": 200,
+      "total": 8,
+      "errors": [
+        "Showing web-sourced results (8 items) \u2014 live scraping unavailable"
+      ],
+      "parsed_query": "wireless earbuds noise cancelling",
+      "parsed_filters": {
+        "min_price": null,
+        "max_price": null,
+        "colour": null,
+        "brand": null,
+        "condition": null,
+        "material": null,
+        "size": null,
+        "marketplaces": []
+      },
+      "items_sample": [
+        {
+          "title": "Sony WF-1000XM5 Wireless Noise Cancelling Earbuds - Black",
+          "price": "\u00a3259.00",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "Sony WF-C710N Wireless Noise Cancelling Earbuds - Blue",
+          "price": "\u00a369.99",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "Apple AirPods Pro 3 with USB-C MagSafe Case",
+          "price": "\u00a3249.00",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "EarFun Air Pro 4+ Wireless Earbuds ANC - Black",
+          "price": "\u00a379.99",
+          "marketplace": "ebay"
+        },
+        {
+          "title": "Bose QuietComfort Ultra Earbuds Gen 2 - White",
+          "price": "\u00a3199.00",
+          "marketplace": "ebay"
+        }
+      ],
+      "filter_options": {
+        "marketplace": 4,
+        "brand": 6,
+        "condition": 3,
+        "colour": 4,
+        "type": 1
+      },
+      "elapsed_s": 0.03,
+      "success": true
+    },
+    {
+      "query": "gaming mouse wireless",
+      "status": 200,
+      "total": 6,
+      "errors": [
+        "Showing web-sourced results (6 items) \u2014 live scraping unavailable"
+      ],
+      "parsed_query": "gaming mouse wireless",
+      "parsed_filters": {
+        "min_price": null,
+        "max_price": null,
+        "colour": null,
+        "brand": null,
+        "condition": null,
+        "material": null,
+        "size": null,
+        "marketplaces": []
+      },
+      "items_sample": [
+        {
+          "title": "Logitech G Pro X2 Superstrike Wireless Gaming Mouse",
+          "price": "\u00a3159.99",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "Logitech G305 Lightspeed Wireless Gaming Mouse - White",
+          "price": "\u00a334.99",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "Razer DeathAdder V4 Pro Gaming Mouse - Black",
+          "price": "\u00a389.99",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "Logitech G502 X Plus Wireless Gaming Mouse - Black",
+          "price": "\u00a399.99",
+          "marketplace": "ebay"
+        },
+        {
+          "title": "Corsair Scimitar Elite Wireless SE MMO Mouse - Black",
+          "price": "\u00a3119.99",
+          "marketplace": "ebay"
+        }
+      ],
+      "filter_options": {
+        "marketplace": 3,
+        "brand": 3,
+        "condition": 2,
+        "colour": 2,
+        "type": 1,
+        "connectivity": 1
+      },
+      "elapsed_s": 0.03,
+      "success": true
+    },
+    {
+      "query": "electric scooter adult",
+      "status": 200,
+      "total": 4,
+      "errors": [
+        "Showing web-sourced results (4 items) \u2014 live scraping unavailable"
+      ],
+      "parsed_query": "electric scooter adult",
+      "parsed_filters": {
+        "min_price": null,
+        "max_price": null,
+        "colour": null,
+        "brand": null,
+        "condition": null,
+        "material": null,
+        "size": null,
+        "marketplaces": []
+      },
+      "items_sample": [
+        {
+          "title": "Xiaomi Electric Scooter 4 Pro Max - Black",
+          "price": "\u00a3599.00",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "Segway Ninebot MAX G2 Electric Scooter - Dark Grey",
+          "price": "\u00a3699.99",
+          "marketplace": "ebay"
+        },
+        {
+          "title": "Xiaomi Electric Scooter 4 Lite - Black - Refurbished",
+          "price": "\u00a3249.99",
+          "marketplace": "ebay"
+        },
+        {
+          "title": "Electric Scooter Xiaomi M365 - Needs New Tyre",
+          "price": "\u00a3120.00",
+          "marketplace": "gumtree"
+        }
+      ],
+      "filter_options": {
+        "marketplace": 3,
+        "brand": 2,
+        "condition": 3,
+        "colour": 2,
+        "type": 1
+      },
+      "elapsed_s": 0.03,
+      "success": true
+    },
+    {
+      "query": "standing desk electric",
+      "status": 200,
+      "total": 4,
+      "errors": [
+        "Showing web-sourced results (4 items) \u2014 live scraping unavailable"
+      ],
+      "parsed_query": "standing desk electric",
+      "parsed_filters": {
+        "min_price": null,
+        "max_price": null,
+        "colour": null,
+        "brand": null,
+        "condition": null,
+        "material": null,
+        "size": null,
+        "marketplaces": []
+      },
+      "items_sample": [
+        {
+          "title": "FlexiSpot E7 Electric Standing Desk 140x70cm - Black",
+          "price": "\u00a3449.99",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "Fezibo Electric Standing Desk 120x60cm - White",
+          "price": "\u00a3179.99",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "IKEA MITTZON Electric Sit-Stand Desk 120x80cm - Oak Veneer",
+          "price": "\u00a3299.00",
+          "marketplace": "ebay"
+        },
+        {
+          "title": "IKEA BEKANT Sit-Stand Desk 160x80cm White",
+          "price": "\u00a3150.00",
+          "marketplace": "gumtree"
+        }
+      ],
+      "filter_options": {
+        "marketplace": 3,
+        "brand": 3,
+        "condition": 2,
+        "colour": 3,
+        "type": 1
+      },
+      "elapsed_s": 0.03,
+      "success": true
+    },
+    {
+      "query": "instant camera Instax",
+      "status": 200,
+      "total": 5,
+      "errors": [
+        "Showing web-sourced results (5 items) \u2014 live scraping unavailable"
+      ],
+      "parsed_query": "instant camera instax",
+      "parsed_filters": {
+        "min_price": null,
+        "max_price": null,
+        "colour": null,
+        "brand": null,
+        "condition": null,
+        "material": null,
+        "size": null,
+        "marketplaces": []
+      },
+      "items_sample": [
+        {
+          "title": "Fujifilm Instax Mini 12 Instant Camera - Pastel Blue",
+          "price": "\u00a369.99",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "Fujifilm Instax Mini Evo Hybrid Instant Camera - Black",
+          "price": "\u00a3159.99",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "Fujifilm Instax Mini 99 Instant Camera - Black",
+          "price": "\u00a3149.99",
+          "marketplace": "ebay"
+        },
+        {
+          "title": "Polaroid Go Gen 2 Instant Camera - White",
+          "price": "\u00a369.99",
+          "marketplace": "ebay"
+        },
+        {
+          "title": "Instax Mini 11 Camera Lilac Purple - Boxed",
+          "price": "\u00a335.00",
+          "marketplace": "gumtree"
+        }
+      ],
+      "filter_options": {
+        "marketplace": 3,
+        "brand": 2,
+        "condition": 2,
+        "colour": 4,
+        "type": 1
+      },
+      "elapsed_s": 0.03,
+      "success": true
+    },
+    {
+      "query": "waterproof hiking boots size 10",
+      "status": 200,
+      "total": 6,
+      "errors": [
+        "Showing web-sourced results (6 items) \u2014 live scraping unavailable"
+      ],
+      "parsed_query": "waterproof hiking boots size 10",
+      "parsed_filters": {
+        "min_price": null,
+        "max_price": null,
+        "colour": null,
+        "brand": null,
+        "condition": null,
+        "material": null,
+        "size": "10",
+        "marketplaces": []
+      },
+      "items_sample": [
+        {
+          "title": "Merrell Moab 3 Mid Waterproof Hiking Boots - Grey Size 10",
+          "price": "\u00a395.00",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "Salomon X Ultra 5 Mid GTX Men's Hiking Boots - Black Size 9",
+          "price": "\u00a3155.00",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "Columbia Newton Ridge Plus II Waterproof Hiking Boots Size 10",
+          "price": "\u00a364.99",
+          "marketplace": "ebay"
+        },
+        {
+          "title": "Hi-Tec Bandera II Waterproof Walking Boots Mens - Brown Size 9",
+          "price": "\u00a342.99",
+          "marketplace": "ebay"
+        },
+        {
+          "title": "Salomon Quest 4 GTX Hiking Boots Size 10 - Worn Twice",
+          "price": "\u00a385.00",
+          "marketplace": "gumtree"
+        }
+      ],
+      "filter_options": {
+        "marketplace": 4,
+        "brand": 4,
+        "condition": 3,
+        "colour": 4,
+        "size": 2,
+        "type": 1,
+        "size_or_spec": 3
+      },
+      "elapsed_s": 0.03,
+      "success": true
+    },
+    {
+      "query": "espresso machine under \u00a3200",
+      "status": 200,
+      "total": 4,
+      "errors": [
+        "Showing web-sourced results (4 items) \u2014 live scraping unavailable"
+      ],
+      "parsed_query": "espresso machine",
+      "parsed_filters": {
+        "min_price": null,
+        "max_price": 200.0,
+        "colour": null,
+        "brand": null,
+        "condition": null,
+        "material": null,
+        "size": null,
+        "marketplaces": []
+      },
+      "items_sample": [
+        {
+          "title": "De'Longhi Stilosa EC235 Espresso Machine - Black",
+          "price": "\u00a394.50",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "Breville Barista Slimline Espresso Machine - Black",
+          "price": "\u00a3169.99",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "De'Longhi Dedica Duo Espresso Machine - Silver - Used",
+          "price": "\u00a395.00",
+          "marketplace": "ebay"
+        },
+        {
+          "title": "DeLonghi Magnifica S Coffee Machine - Silver",
+          "price": "\u00a3180.00",
+          "marketplace": "gumtree"
+        }
+      ],
+      "filter_options": {
+        "marketplace": 3,
+        "brand": 2,
+        "condition": 2,
+        "colour": 2,
+        "type": 1,
+        "size_or_spec": 1
+      },
+      "elapsed_s": 0.03,
+      "success": true
+    },
+    {
+      "query": "iPad tablet",
+      "status": 200,
+      "total": 4,
+      "errors": [
+        "Showing web-sourced results (4 items) \u2014 live scraping unavailable"
+      ],
+      "parsed_query": "ipad tablet",
+      "parsed_filters": {
+        "min_price": null,
+        "max_price": null,
+        "colour": null,
+        "brand": null,
+        "condition": null,
+        "material": null,
+        "size": null,
+        "marketplaces": []
+      },
+      "items_sample": [
+        {
+          "title": "Apple iPad Air M4 11-inch 128GB Wi-Fi - Space Grey",
+          "price": "\u00a3599.00",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "Apple iPad 10.9-inch 2025 128GB - Blue",
+          "price": "\u00a3299.00",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "Apple iPad Mini 2024 8.3-inch 128GB - Purple",
+          "price": "\u00a3369.00",
+          "marketplace": "ebay"
+        },
+        {
+          "title": "iPad Air 5th Gen 64GB Space Grey - Mint",
+          "price": "\u00a3280.00",
+          "marketplace": "gumtree"
+        }
+      ],
+      "filter_options": {
+        "marketplace": 3,
+        "brand": 1,
+        "condition": 2,
+        "colour": 4,
+        "size": 2,
+        "type": 1,
+        "size_or_spec": 2,
+        "storage": 2
+      },
+      "elapsed_s": 0.03,
+      "success": true
+    },
+    {
+      "query": "power bank 20000mAh",
+      "status": 200,
+      "total": 5,
+      "errors": [
+        "Showing web-sourced results (5 items) \u2014 live scraping unavailable"
+      ],
+      "parsed_query": "power bank 20000mah",
+      "parsed_filters": {
+        "min_price": null,
+        "max_price": null,
+        "colour": null,
+        "brand": null,
+        "condition": null,
+        "material": null,
+        "size": null,
+        "marketplaces": []
+      },
+      "items_sample": [
+        {
+          "title": "Anker Prime Power Bank 20000mAh 200W - Black",
+          "price": "\u00a3129.99",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "Anker Nano Power Bank 10000mAh with Built-in USB-C Cable - Black",
+          "price": "\u00a349.99",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "Anker Nano Power Bank 5000mAh Mini - White",
+          "price": "\u00a325.99",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "Anker Zolo 20000mAh Power Bank 30W USB-C - Black",
+          "price": "\u00a329.99",
+          "marketplace": "ebay"
+        },
+        {
+          "title": "Anker 20000mAh Power Bank - Barely Used",
+          "price": "\u00a312.00",
+          "marketplace": "gumtree"
+        }
+      ],
+      "filter_options": {
+        "marketplace": 3,
+        "brand": 1,
+        "condition": 2,
+        "colour": 2,
+        "type": 1,
+        "capacity": 3
+      },
+      "elapsed_s": 0.03,
+      "success": true
+    },
+    {
+      "query": "baby pushchair stroller",
+      "status": 200,
+      "total": 6,
+      "errors": [
+        "Showing web-sourced results (6 items) \u2014 live scraping unavailable"
+      ],
+      "parsed_query": "baby pushchair stroller",
+      "parsed_filters": {
+        "min_price": null,
+        "max_price": null,
+        "colour": null,
+        "brand": null,
+        "condition": null,
+        "material": null,
+        "size": null,
+        "marketplaces": []
+      },
+      "items_sample": [
+        {
+          "title": "Silver Cross Reef Pushchair - Orbit Black",
+          "price": "\u00a3499.00",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "Nuna Mixx Next Pushchair - Caviar Black",
+          "price": "\u00a3660.00",
+          "marketplace": "ebay"
+        },
+        {
+          "title": "Joie Pact Lite Pushchair - Grey Flannel - Used",
+          "price": "\u00a345.00",
+          "marketplace": "ebay"
+        },
+        {
+          "title": "Silver Cross Zest Pushchair - Light Grey - Like New",
+          "price": "\u00a380.00",
+          "marketplace": "gumtree"
+        },
+        {
+          "title": "Uppababy Vista V2 Pushchair - Gregory Blue",
+          "price": "\u00a3380.00",
+          "marketplace": "vinted"
+        }
+      ],
+      "filter_options": {
+        "marketplace": 4,
+        "brand": 5,
+        "condition": 4,
+        "colour": 5,
+        "type": 1
+      },
+      "elapsed_s": 0.03,
+      "success": true
+    },
+    {
+      "query": "weighted blanket 8kg",
+      "status": 200,
+      "total": 3,
+      "errors": [
+        "Showing web-sourced results (3 items) \u2014 live scraping unavailable"
+      ],
+      "parsed_query": "weighted blanket 8kg",
+      "parsed_filters": {
+        "min_price": null,
+        "max_price": null,
+        "colour": null,
+        "brand": null,
+        "condition": null,
+        "material": null,
+        "size": null,
+        "marketplaces": []
+      },
+      "items_sample": [
+        {
+          "title": "Brentfords Weighted Blanket 8kg 150x200cm - Silver Grey",
+          "price": "\u00a324.99",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "Silentnight Wellbeing Weighted Blanket 6.8kg - Grey",
+          "price": "\u00a335.00",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "Weighted Blanket Gravity Sensory 8kg 150x200cm - Dark Grey",
+          "price": "\u00a318.99",
+          "marketplace": "ebay"
+        }
+      ],
+      "filter_options": {
+        "marketplace": 2,
+        "brand": 2,
+        "condition": 1,
+        "colour": 2,
+        "type": 1,
+        "size_or_spec": 1,
+        "weight": 2
+      },
+      "elapsed_s": 0.03,
+      "success": true
+    },
+    {
+      "query": "resistance bands set",
+      "status": 200,
+      "total": 3,
+      "errors": [
+        "Showing web-sourced results (3 items) \u2014 live scraping unavailable"
+      ],
+      "parsed_query": "resistance bands set",
+      "parsed_filters": {
+        "min_price": null,
+        "max_price": null,
+        "colour": null,
+        "brand": null,
+        "condition": null,
+        "material": null,
+        "size": null,
+        "marketplaces": []
+      },
+      "items_sample": [
+        {
+          "title": "Gritin Resistance Bands Set of 5 with Carry Case",
+          "price": "\u00a37.99",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "COFOF Resistance Bands Set with Handles - 150lbs Stackable",
+          "price": "\u00a325.99",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "FitBeast Pull Up Resistance Bands Set 5 Pack",
+          "price": "\u00a319.99",
+          "marketplace": "ebay"
+        }
+      ],
+      "filter_options": {
+        "marketplace": 2,
+        "brand": 3,
+        "condition": 1,
+        "type": 1
+      },
+      "elapsed_s": 0.03,
+      "success": true
+    },
+    {
+      "query": "cast iron skillet Lodge",
+      "status": 200,
+      "total": 4,
+      "errors": [
+        "Showing web-sourced results (4 items) \u2014 live scraping unavailable"
+      ],
+      "parsed_query": "cast iron skillet lodge",
+      "parsed_filters": {
+        "min_price": null,
+        "max_price": null,
+        "colour": null,
+        "brand": null,
+        "condition": null,
+        "material": null,
+        "size": null,
+        "marketplaces": []
+      },
+      "items_sample": [
+        {
+          "title": "Lodge Pre-Seasoned Cast Iron Skillet 26cm",
+          "price": "\u00a339.99",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "VonShef 3-Piece Cast Iron Skillet Set Pre-Seasoned",
+          "price": "\u00a319.99",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "Le Creuset Signature Cast Iron Frying Pan 26cm - Volcanic Orange",
+          "price": "\u00a3105.00",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "Lodge Cast Iron Skillet 30cm Pre-Seasoned",
+          "price": "\u00a344.99",
+          "marketplace": "ebay"
+        }
+      ],
+      "filter_options": {
+        "marketplace": 2,
+        "brand": 3,
+        "condition": 1,
+        "colour": 1,
+        "material": 1,
+        "size": 2,
+        "type": 1,
+        "size_or_spec": 2
+      },
+      "elapsed_s": 0.03,
+      "success": true
+    },
+    {
+      "query": "noise cancelling headphones Sony",
+      "status": 200,
+      "total": 5,
+      "errors": [
+        "Showing web-sourced results (5 items) \u2014 live scraping unavailable"
+      ],
+      "parsed_query": "noise cancelling headphones sony",
+      "parsed_filters": {
+        "min_price": null,
+        "max_price": null,
+        "colour": null,
+        "brand": "sony",
+        "condition": null,
+        "material": null,
+        "size": null,
+        "marketplaces": []
+      },
+      "items_sample": [
+        {
+          "title": "Sony WH-1000XM6 Wireless Noise Cancelling Headphones - Black",
+          "price": "\u00a3379.00",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "Sony WH-CH720N Wireless Noise Cancelling Headphones - Blue",
+          "price": "\u00a375.00",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "Sony WH-1000XM5 Wireless Noise Cancelling Headphones - Silver",
+          "price": "\u00a3229.00",
+          "marketplace": "ebay"
+        },
+        {
+          "title": "Sony WH-1000XM4 Headphones Black - Great Condition",
+          "price": "\u00a3140.00",
+          "marketplace": "gumtree"
+        },
+        {
+          "title": "Sony WH-CH710N Headphones Blue",
+          "price": "\u00a322.00",
+          "marketplace": "vinted"
+        }
+      ],
+      "filter_options": {
+        "marketplace": 4,
+        "brand": 1,
+        "condition": 3,
+        "colour": 3,
+        "type": 1,
+        "connectivity": 1
+      },
+      "elapsed_s": 0.03,
+      "success": true
+    },
+    {
+      "query": "camping tent 2 person",
+      "status": 200,
+      "total": 4,
+      "errors": [
+        "Showing web-sourced results (4 items) \u2014 live scraping unavailable"
+      ],
+      "parsed_query": "camping tent 2 person",
+      "parsed_filters": {
+        "min_price": null,
+        "max_price": null,
+        "colour": null,
+        "brand": null,
+        "condition": null,
+        "material": null,
+        "size": null,
+        "marketplaces": []
+      },
+      "items_sample": [
+        {
+          "title": "Coleman Cobra 2 Person Backpacking Tent - Green",
+          "price": "\u00a389.99",
+          "marketplace": "amazon"
+        },
+        {
+          "title": "Vango Nevis 200 2-Person Tent - Green",
+          "price": "\u00a355.00",
+          "marketplace": "ebay"
+        },
+        {
+          "title": "Coleman Sundome 2-Person Tent - Navy Blue - Used",
+          "price": "\u00a328.00",
+          "marketplace": "ebay"
+        },
+        {
+          "title": "Vango Alpha 200 Tent 2 Person Green - Used Once",
+          "price": "\u00a325.00",
+          "marketplace": "gumtree"
+        }
+      ],
+      "filter_options": {
+        "marketplace": 3,
+        "brand": 2,
+        "condition": 3,
+        "colour": 3,
+        "type": 1,
+        "capacity": 1
+      },
+      "elapsed_s": 0.04,
+      "success": true
+    }
+  ],
+  "summary": {
+    "total_searches": 20,
+    "api_successes": 20,
+    "api_failures": 0,
+    "zero_result_searches": 0,
+    "searches_with_results": 20,
+    "avg_response_time_s": 0.05,
+    "max_response_time_s": 0.5
+  }
+}

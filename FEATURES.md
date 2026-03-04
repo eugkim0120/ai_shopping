@@ -46,6 +46,20 @@
 - [x] Sort persists when filters change
 - [x] Dramatically improved search relevance across all 20 test queries
 
+## v0.5.0 — Real Web Data, Synonym Matching & Smart Filtering (Iterations 3 & 4)
+- [x] WebDataScraper with ~160 real products sourced from live web searches
+- [x] Real prices from Amazon, eBay, Gumtree, Facebook Marketplace & Vinted (March 2026)
+- [x] Synonym expansion (pushchair↔stroller↔pram, trainers↔sneakers, etc.)
+- [x] Hard brand filtering — brand in query rejects non-matching items
+- [x] Type-aware conflict filtering (earbuds vs headphones vs speakers)
+- [x] Dynamic minimum match ratio (0.6 for short queries, 0.5 for longer)
+- [x] Relevance-first sort order (score-based, not price-based)
+- [x] Marketplace colour-coded badges (Amazon orange, eBay blue, etc.)
+- [x] Marketplace chips wired to API — deselect to filter by marketplace
+- [x] Data freshness indicator ("Prices sourced from... — March 2026")
+- [x] 20/20 search queries return relevant results
+- [x] Test suite expanded to 44 tests
+
 ## Planned
 - [ ] Playwright-based scraping for JS-heavy sites
 - [ ] Caching layer for search results

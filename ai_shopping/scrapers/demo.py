@@ -104,7 +104,7 @@ _CATALOGUES: dict[str, list[dict]] = {
 STOP_WORDS = {"the", "a", "an", "and", "or", "for", "with", "on", "in", "to", "of", "is", "it"}
 
 # Minimum percentage of query words that must match for an item to be included
-MIN_MATCH_RATIO = 0.4
+MIN_MATCH_RATIO = 0.5
 
 
 def _score_item(item: dict, query_words: list[str], colour: str | None, condition: str | None) -> float:

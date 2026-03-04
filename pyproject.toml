@@ -1,6 +1,6 @@
 [project]
 name = "ai-shopping"
-version = "0.4.0"
+version = "0.5.0"
 description = "Multi-marketplace scraper with auto-categorisation and intelligent search"
 requires-python = ">=3.11"
 dependencies = [

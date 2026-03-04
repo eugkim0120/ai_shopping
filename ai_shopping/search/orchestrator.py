@@ -5,7 +5,7 @@ import logging
 
 from ai_shopping.categorisation.engine import CategorisationEngine
 from ai_shopping.scrapers.base import ScrapedItem
-from ai_shopping.scrapers.demo import DemoScraper
+from ai_shopping.scrapers.web_data import WebDataScraper
 from ai_shopping.scrapers.registry import ScraperRegistry
 from ai_shopping.search.detector import SearchDetector, SearchIntent
 
@@ -26,11 +26,11 @@ class SearchOrchestrator:
         self.detector = detector
         self.categoriser = categoriser
         self.use_demo_fallback = use_demo_fallback
-        self._demo_scrapers: dict[str, DemoScraper] = {}
+        self._demo_scrapers: dict[str, WebDataScraper] = {}
 
-    def _get_demo_scraper(self, marketplace_name: str) -> DemoScraper:
+    def _get_demo_scraper(self, marketplace_name: str) -> WebDataScraper:
         if marketplace_name not in self._demo_scrapers:
-            self._demo_scrapers[marketplace_name] = DemoScraper(marketplace_name)
+            self._demo_scrapers[marketplace_name] = WebDataScraper(marketplace_name)
         return self._demo_scrapers[marketplace_name]
 
     async def search(self, raw_query: str) -> dict:
@@ -46,6 +46,8 @@ class SearchOrchestrator:
             filters["colour"] = intent.colour
         if intent.condition:
             filters["condition"] = intent.condition
+        if intent.brand:
+            filters["brand"] = intent.brand
 
         tasks = [scraper.search(intent.query, **filters) for scraper in scrapers]
         results_lists = await asyncio.gather(*tasks, return_exceptions=True)
@@ -82,10 +84,9 @@ class SearchOrchestrator:
                     demo_count += len(demo_result)
 
             if demo_count > 0:
-                errors = [f"Using demo data ({demo_count} items) — live scrapers unavailable"]
+                errors = [f"Showing web-sourced results ({demo_count} items) — live scraping unavailable"]
 
-        # Sort by price (lowest first) as a default
-        all_items.sort(key=lambda x: _parse_price(x.price) if x.price else float("inf"))
+        # Keep relevance order from scrapers (they return items sorted by score)
 
         filter_options = self.categoriser.get_filter_options(all_items)
 

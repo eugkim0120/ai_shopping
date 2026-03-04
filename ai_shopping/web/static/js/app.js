@@ -13,6 +13,7 @@ const filtersPanel = document.getElementById('filtersPanel');
 const dynamicFilters = document.getElementById('dynamicFilters');
 const sortSelect = document.getElementById('sortSelect');
 const demoBanner = document.getElementById('demoBanner');
+const dataFreshness = document.getElementById('dataFreshness');
 
 let allItems = [];
 let totalFromServer = 0;
@@ -41,8 +42,20 @@ async function performSearch(query) {
 
     try {
         const sort = currentSort || 'relevance';
+        // Include selected marketplaces from chips
+        const selectedMarketplaces = [];
+        document.querySelectorAll('#marketplaceChips input[type="checkbox"]').forEach(cb => {
+            if (!cb.checked) return; // only include checked ones
+            selectedMarketplaces.push(cb.value);
+        });
+        const allChips = document.querySelectorAll('#marketplaceChips input[type="checkbox"]');
+        // Only add marketplace param if not all are selected (i.e. user deselected some)
+        let mpParam = '';
+        if (selectedMarketplaces.length < allChips.length && selectedMarketplaces.length > 0) {
+            mpParam = `&marketplaces=${selectedMarketplaces.join(',')}`;
+        }
         const resp = await fetch(
-            `/api/search?q=${encodeURIComponent(query)}&sort=${sort}`,
+            `/api/search?q=${encodeURIComponent(query)}&sort=${sort}${mpParam}`,
             { signal: controller.signal }
         );
         clearTimeout(timeoutId);
@@ -50,9 +63,12 @@ async function performSearch(query) {
         allItems = data.items || [];
         totalFromServer = data.total || 0;
 
-        isDemo = (data.errors || []).some(e => e.includes('demo data'));
+        isDemo = (data.errors || []).some(e => e.includes('web-sourced') || e.includes('demo data'));
         if (demoBanner) {
             demoBanner.classList.toggle('hidden', !isDemo);
+        }
+        if (dataFreshness) {
+            dataFreshness.classList.toggle('hidden', !isDemo || data.total === 0);
         }
 
         renderResults(data);
@@ -95,7 +111,7 @@ function renderResults(data) {
     errorsDiv.classList.add('hidden');
 
     // Only show non-demo errors
-    const realErrors = (data.errors || []).filter(e => !e.includes('demo data'));
+    const realErrors = (data.errors || []).filter(e => !e.includes('demo data') && !e.includes('web-sourced'));
     if (realErrors.length > 0) {
         errorsDiv.innerHTML = realErrors.map(e =>
             `<div class="error-line">${escapeHtml(e)}</div>`
@@ -161,7 +177,7 @@ function renderCards(items) {
                 }
                 <div class="item-body">
                     <div class="item-top-row">
-                        <span class="item-marketplace">${(item.marketplace || '').replace('_', ' ')}</span>
+                        <span class="item-marketplace item-marketplace--${(item.marketplace || '').replace('_', '-')}">${(item.marketplace || '').replace('_', ' ')}</span>
                         ${condition ? `<span class="item-condition item-condition--${condition.toLowerCase().replace(/\s+/g, '-')}">${escapeHtml(condition)}</span>` : ''}
                     </div>
                     ${brand ? `<div class="item-brand">${escapeHtml(brand)}</div>` : ''}
