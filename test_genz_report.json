@@ -1,0 +1,588 @@
+[
+  {
+    "query": "AirPods Pro",
+    "total": 2,
+    "time_ms": 525,
+    "parsed": {
+      "min_price": null,
+      "max_price": null,
+      "colour": null,
+      "brand": null,
+      "condition": null,
+      "material": null,
+      "size": null,
+      "marketplaces": []
+    },
+    "sample_titles": [
+      "Apple AirPods Pro 3 with USB-C MagSafe Case",
+      "EarFun Air Pro 4+ Wireless Earbuds ANC - Black"
+    ],
+    "sample_prices": [
+      "\u00a3249.00",
+      "\u00a379.99"
+    ],
+    "marketplaces": [
+      "ebay",
+      "amazon"
+    ]
+  },
+  {
+    "query": "Stanley cup tumbler",
+    "total": 3,
+    "time_ms": 40,
+    "parsed": {
+      "min_price": null,
+      "max_price": null,
+      "colour": null,
+      "brand": null,
+      "condition": null,
+      "material": null,
+      "size": null,
+      "marketplaces": []
+    },
+    "sample_titles": [
+      "Stanley Quencher H2.0 FlowState Tumbler 40oz - Cream",
+      "Stanley Adventure Quencher Tumbler 30oz - Rose Quartz",
+      "Stanley Quencher H2.0 Tumbler 40oz - Charcoal"
+    ],
+    "sample_prices": [
+      "\u00a344.99",
+      "\u00a339.99",
+      "\u00a335.99"
+    ],
+    "marketplaces": [
+      "ebay",
+      "amazon"
+    ]
+  },
+  {
+    "query": "Dyson Airwrap",
+    "total": 4,
+    "time_ms": 42,
+    "parsed": {
+      "min_price": null,
+      "max_price": null,
+      "colour": null,
+      "brand": "dyson",
+      "condition": null,
+      "material": null,
+      "size": null,
+      "marketplaces": []
+    },
+    "sample_titles": [
+      "Dyson Airwrap Multi-Styler Complete Long - Nickel/Copper",
+      "Dyson Airwrap i.d. Multi-Styler - Strawberry Bronze",
+      "Dyson Airwrap Complete Long - Refurbished"
+    ],
+    "sample_prices": [
+      "\u00a3479.99",
+      "\u00a3449.99",
+      "\u00a3329.99"
+    ],
+    "marketplaces": [
+      "ebay",
+      "amazon",
+      "gumtree"
+    ]
+  },
+  {
+    "query": "lululemon leggings",
+    "total": 3,
+    "time_ms": 39,
+    "parsed": {
+      "min_price": null,
+      "max_price": null,
+      "colour": null,
+      "brand": null,
+      "condition": null,
+      "material": null,
+      "size": null,
+      "marketplaces": []
+    },
+    "sample_titles": [
+      "Lululemon Align High-Rise Leggings 25\" - Black",
+      "Lululemon Wunder Under Leggings - Black Size 8",
+      "Lululemon Align Leggings 25\" Dark Olive Size 6"
+    ],
+    "sample_prices": [
+      "\u00a388.00",
+      "\u00a345.00",
+      "\u00a335.00"
+    ],
+    "marketplaces": [
+      "vinted",
+      "ebay",
+      "amazon"
+    ]
+  },
+  {
+    "query": "white Nike dunks size 10",
+    "total": 6,
+    "time_ms": 40,
+    "parsed": {
+      "min_price": null,
+      "max_price": null,
+      "colour": "white",
+      "brand": "nike",
+      "condition": null,
+      "material": null,
+      "size": "10",
+      "marketplaces": []
+    },
+    "sample_titles": [
+      "Nike Dunk Low Retro Mens Trainers - White/Black Panda",
+      "Nike Dunk Low Panda Black White UK 10 - Used",
+      "Nike Pegasus 41 Running Shoes - Black Size 9"
+    ],
+    "sample_prices": [
+      "\u00a3109.99",
+      "\u00a365.00",
+      "\u00a374.99"
+    ],
+    "marketplaces": [
+      "vinted",
+      "ebay",
+      "amazon",
+      "gumtree"
+    ]
+  },
+  {
+    "query": "gaming keyboard RGB",
+    "total": 3,
+    "time_ms": 39,
+    "parsed": {
+      "min_price": null,
+      "max_price": null,
+      "colour": null,
+      "brand": null,
+      "condition": null,
+      "material": null,
+      "size": null,
+      "marketplaces": []
+    },
+    "sample_titles": [
+      "Corsair K55 RGB Gaming Keyboard - Black",
+      "Razer BlackWidow V4 Mechanical Gaming Keyboard - Black",
+      "Corsair K70 RGB Pro Mechanical Keyboard Cherry MX Red - Used"
+    ],
+    "sample_prices": [
+      "\u00a334.99",
+      "\u00a3169.99",
+      "\u00a379.99"
+    ],
+    "marketplaces": [
+      "ebay",
+      "amazon"
+    ]
+  },
+  {
+    "query": "iPad Air for uni",
+    "total": 2,
+    "time_ms": 37,
+    "parsed": {
+      "min_price": null,
+      "max_price": null,
+      "colour": null,
+      "brand": null,
+      "condition": null,
+      "material": null,
+      "size": null,
+      "marketplaces": []
+    },
+    "sample_titles": [
+      "Apple iPad Air M4 11-inch 128GB Wi-Fi - Space Grey",
+      "iPad Air 5th Gen 64GB Space Grey - Mint"
+    ],
+    "sample_prices": [
+      "\u00a3599.00",
+      "\u00a3280.00"
+    ],
+    "marketplaces": [
+      "amazon",
+      "gumtree"
+    ]
+  },
+  {
+    "query": "secondhand designer wallet",
+    "total": 5,
+    "time_ms": 40,
+    "parsed": {
+      "min_price": null,
+      "max_price": null,
+      "colour": null,
+      "brand": null,
+      "condition": "used",
+      "material": null,
+      "size": null,
+      "marketplaces": []
+    },
+    "sample_titles": [
+      "Ted Baker Men's Leather Wallet Brown",
+      "Michael Kors Jet Set Travel Wallet - Pink",
+      "Gucci GG Marmont Card Case Wallet - Black"
+    ],
+    "sample_prices": [
+      "\u00a320.00",
+      "\u00a330.00",
+      "\u00a3180.00"
+    ],
+    "marketplaces": [
+      "vinted",
+      "gumtree"
+    ]
+  },
+  {
+    "query": "cheap protein powder",
+    "total": 4,
+    "time_ms": 37,
+    "parsed": {
+      "min_price": null,
+      "max_price": null,
+      "colour": null,
+      "brand": null,
+      "condition": null,
+      "material": null,
+      "size": null,
+      "marketplaces": []
+    },
+    "sample_titles": [
+      "Bulk Pure Whey Protein 1kg - Strawberry",
+      "MyProtein Impact Whey Protein 1kg - Vanilla",
+      "Optimum Nutrition Gold Standard Whey 908g - Chocolate"
+    ],
+    "sample_prices": [
+      "\u00a314.99",
+      "\u00a318.99",
+      "\u00a325.99"
+    ],
+    "marketplaces": [
+      "ebay",
+      "amazon"
+    ]
+  },
+  {
+    "query": "Sony headphones noise cancelling",
+    "total": 5,
+    "time_ms": 33,
+    "parsed": {
+      "min_price": null,
+      "max_price": null,
+      "colour": null,
+      "brand": "sony",
+      "condition": null,
+      "material": null,
+      "size": null,
+      "marketplaces": []
+    },
+    "sample_titles": [
+      "Sony WH-1000XM6 Wireless Noise Cancelling Headphones - Black",
+      "Sony WH-CH720N Wireless Noise Cancelling Headphones - Blue",
+      "Sony WH-1000XM5 Wireless Noise Cancelling Headphones - Silver"
+    ],
+    "sample_prices": [
+      "\u00a3379.00",
+      "\u00a375.00",
+      "\u00a3229.00"
+    ],
+    "marketplaces": [
+      "vinted",
+      "ebay",
+      "amazon",
+      "gumtree"
+    ]
+  },
+  {
+    "query": "aesthetic desk lamp",
+    "total": 3,
+    "time_ms": 35,
+    "parsed": {
+      "min_price": null,
+      "max_price": null,
+      "colour": null,
+      "brand": null,
+      "condition": null,
+      "material": null,
+      "size": null,
+      "marketplaces": []
+    },
+    "sample_titles": [
+      "TaoTronics LED Desk Lamp Eye-Caring Dimmable - Silver",
+      "BenQ ScreenBar Monitor Light Bar - Black",
+      "LED Desk Lamp USB Rechargeable White"
+    ],
+    "sample_prices": [
+      "\u00a329.99",
+      "\u00a399.00",
+      "\u00a310.00"
+    ],
+    "marketplaces": [
+      "amazon",
+      "gumtree"
+    ]
+  },
+  {
+    "query": "vintage Casio watch gold",
+    "total": 3,
+    "time_ms": 33,
+    "parsed": {
+      "min_price": null,
+      "max_price": null,
+      "colour": "gold",
+      "brand": "casio",
+      "condition": "used",
+      "material": null,
+      "size": null,
+      "marketplaces": []
+    },
+    "sample_titles": [
+      "Casio Vintage A168WG-9EF Digital Watch - Gold",
+      "Casio G-Shock GA-2100GB-1AER CasiOak - Black/Gold",
+      "Casio F-91W Classic Digital Watch - Black Vintage"
+    ],
+    "sample_prices": [
+      "\u00a344.90",
+      "\u00a399.99",
+      "\u00a312.99"
+    ],
+    "marketplaces": [
+      "ebay",
+      "amazon"
+    ]
+  },
+  {
+    "query": "running shoes under \u00a380",
+    "total": 7,
+    "time_ms": 38,
+    "parsed": {
+      "min_price": null,
+      "max_price": 80.0,
+      "colour": null,
+      "brand": null,
+      "condition": null,
+      "material": null,
+      "size": null,
+      "marketplaces": []
+    },
+    "sample_titles": [
+      "Nike Revolution 7 Mens Running Shoes - Black",
+      "ASICS Gel-Nimbus 26 Running Shoes - Blue",
+      "New Balance Fresh Foam X 1080v14 - Grey"
+    ],
+    "sample_prices": [
+      "\u00a354.99",
+      "\u00a374.99",
+      "\u00a369.99"
+    ],
+    "marketplaces": [
+      "vinted",
+      "ebay",
+      "amazon",
+      "gumtree"
+    ]
+  },
+  {
+    "query": "vinted leather jacket",
+    "total": 3,
+    "time_ms": 13,
+    "parsed": {
+      "min_price": null,
+      "max_price": null,
+      "colour": null,
+      "brand": null,
+      "condition": null,
+      "material": "leather",
+      "size": null,
+      "marketplaces": [
+        "vinted"
+      ]
+    },
+    "sample_titles": [
+      "Vintage Leather Biker Jacket Womens - Black M",
+      "AllSaints Cargo Leather Biker Jacket - Brown L",
+      "Zara Faux Leather Biker Jacket - Black S"
+    ],
+    "sample_prices": [
+      "\u00a342.00",
+      "\u00a395.00",
+      "\u00a328.00"
+    ],
+    "marketplaces": [
+      "vinted"
+    ]
+  },
+  {
+    "query": "Samsung Galaxy Buds",
+    "total": 6,
+    "time_ms": 36,
+    "parsed": {
+      "min_price": null,
+      "max_price": null,
+      "colour": null,
+      "brand": "samsung",
+      "condition": null,
+      "material": null,
+      "size": null,
+      "marketplaces": []
+    },
+    "sample_titles": [
+      "Samsung Galaxy Buds 3 Pro Wireless Earbuds - Silver",
+      "Samsung Galaxy Buds FE Wireless Earbuds - Graphite",
+      "Samsung Galaxy Fit 3 Fitness Tracker - Silver"
+    ],
+    "sample_prices": [
+      "\u00a3219.00",
+      "\u00a369.00",
+      "\u00a349.99"
+    ],
+    "marketplaces": [
+      "vinted",
+      "ebay",
+      "amazon"
+    ]
+  },
+  {
+    "query": "electric scooter budget",
+    "total": 7,
+    "time_ms": 35,
+    "parsed": {
+      "min_price": null,
+      "max_price": null,
+      "colour": null,
+      "brand": null,
+      "condition": null,
+      "material": null,
+      "size": null,
+      "marketplaces": []
+    },
+    "sample_titles": [
+      "Pure Air Go 2 Electric Scooter Folding - Grey",
+      "Xiaomi Electric Scooter 4 Pro Max - Black",
+      "iScooter i9 Electric Scooter 350W - Black"
+    ],
+    "sample_prices": [
+      "\u00a3149.00",
+      "\u00a3599.00",
+      "\u00a3229.00"
+    ],
+    "marketplaces": [
+      "ebay",
+      "amazon",
+      "gumtree"
+    ]
+  },
+  {
+    "query": "yoga mat thick",
+    "total": 2,
+    "time_ms": 36,
+    "parsed": {
+      "min_price": null,
+      "max_price": null,
+      "colour": null,
+      "brand": null,
+      "condition": null,
+      "material": null,
+      "size": null,
+      "marketplaces": []
+    },
+    "sample_titles": [
+      "Gaiam Essentials Thick Yoga Mat 10mm with Strap - Purple",
+      "TOPLUS Extra Thick Yoga Mat 10mm Non-Slip - Black"
+    ],
+    "sample_prices": [
+      "\u00a324.99",
+      "\u00a319.99"
+    ],
+    "marketplaces": [
+      "amazon"
+    ]
+  },
+  {
+    "query": "Bose speaker portable",
+    "total": 4,
+    "time_ms": 34,
+    "parsed": {
+      "min_price": null,
+      "max_price": null,
+      "colour": null,
+      "brand": "bose",
+      "condition": null,
+      "material": null,
+      "size": null,
+      "marketplaces": []
+    },
+    "sample_titles": [
+      "Bose SoundLink Revolve+ II Portable Speaker - Black",
+      "Bose SoundLink Flex 2nd Gen Bluetooth Speaker - Blue",
+      "Bose SoundLink Mini II Special Edition - Silver"
+    ],
+    "sample_prices": [
+      "\u00a3279.99",
+      "\u00a3149.99",
+      "\u00a3129.99"
+    ],
+    "marketplaces": [
+      "ebay",
+      "amazon"
+    ]
+  },
+  {
+    "query": "refurbished MacBook",
+    "total": 4,
+    "time_ms": 34,
+    "parsed": {
+      "min_price": null,
+      "max_price": null,
+      "colour": null,
+      "brand": null,
+      "condition": "refurbished",
+      "material": null,
+      "size": null,
+      "marketplaces": []
+    },
+    "sample_titles": [
+      "Apple MacBook Air M3 13-inch 256GB - Midnight",
+      "Apple MacBook Air M2 13-inch 256GB - Space Grey Refurbished",
+      "Apple MacBook Pro M1 14-inch 512GB - Refurbished Good"
+    ],
+    "sample_prices": [
+      "\u00a3999.00",
+      "\u00a3649.00",
+      "\u00a3899.00"
+    ],
+    "marketplaces": [
+      "ebay",
+      "amazon",
+      "gumtree"
+    ]
+  },
+  {
+    "query": "camping tent 2 person",
+    "total": 4,
+    "time_ms": 44,
+    "parsed": {
+      "min_price": null,
+      "max_price": null,
+      "colour": null,
+      "brand": null,
+      "condition": null,
+      "material": null,
+      "size": null,
+      "marketplaces": []
+    },
+    "sample_titles": [
+      "Coleman Cobra 2 Person Backpacking Tent - Green",
+      "Vango Nevis 200 2-Person Tent - Green",
+      "Coleman Sundome 2-Person Tent - Navy Blue - Used"
+    ],
+    "sample_prices": [
+      "\u00a389.99",
+      "\u00a355.00",
+      "\u00a328.00"
+    ],
+    "marketplaces": [
+      "ebay",
+      "amazon",
+      "gumtree"
+    ]
+  }
+]

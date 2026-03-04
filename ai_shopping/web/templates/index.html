@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Shopping — Smart Multi-Marketplace Search</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="container">
+            <h1 class="logo">AI Shopping</h1>
+            <p class="tagline">Search across every marketplace. One query. All results.</p>
+            <form class="search-form" id="searchForm">
+                <div class="search-bar">
+                    <input
+                        type="text"
+                        id="searchInput"
+                        name="q"
+                        placeholder="Try: 'black iPhone under £500 on eBay' or 'Nike trainers size 10'"
+                        autocomplete="off"
+                        autofocus
+                    >
+                    <button type="submit" id="searchBtn">Search</button>
+                </div>
+                <div class="marketplace-chips" id="marketplaceChips">
+                    {% for m in marketplaces %}
+                    <label class="chip">
+                        <input type="checkbox" name="marketplace" value="{{ m }}" checked>
+                        <span>{{ m.replace('_', ' ').title() }}</span>
+                    </label>
+                    {% endfor %}
+                </div>
+            </form>
+        </div>
+    </header>
+
+    <div id="demoBanner" class="demo-banner hidden">
+        <div class="container">
+            Web-Sourced Data — Real products from web searches. Direct marketplace scraping unavailable in this environment.
+        </div>
+    </div>
+    <div id="dataFreshness" class="data-freshness hidden">
+        Prices sourced from Amazon, eBay, Gumtree, Facebook Marketplace & Vinted — March 2026
+    </div>
+
+    <main class="container">
+        <div id="searchMeta" class="search-meta hidden">
+            <div class="parsed-intent" id="parsedIntent"></div>
+            <div class="meta-controls">
+                <select id="sortSelect" class="sort-select">
+                    <option value="relevance">Sort: Relevance</option>
+                    <option value="price_asc">Price: Low to High</option>
+                    <option value="price_desc">Price: High to Low</option>
+                    <option value="name_asc">Name: A to Z</option>
+                </select>
+                <span class="result-count" id="resultCount"></span>
+            </div>
+        </div>
+
+        <div class="results-layout">
+            <aside class="filters-panel hidden" id="filtersPanel">
+                <h3>Filters</h3>
+                <div id="dynamicFilters"></div>
+            </aside>
+
+            <section class="results-grid" id="resultsGrid">
+                <div class="empty-state" id="emptyState">
+                    <div class="empty-icon">&#x1F50D;</div>
+                    <p>Search for anything across Facebook Marketplace, GumTree, Amazon, eBay, Vinted, and more.</p>
+                </div>
+            </section>
+        </div>
+
+        <div class="loading hidden" id="loading">
+            <div class="spinner"></div>
+            <p>Searching across marketplaces...</p>
+        </div>
+
+        <div class="errors hidden" id="errors"></div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>AI Shopping v0.5.0 — Multi-Marketplace Intelligent Search</p>
+        </div>
+    </footer>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
