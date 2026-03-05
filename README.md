@@ -13,14 +13,15 @@ This project scrapes Facebook marketplace, GumTree, Amazon, eBay, Vinted, and ma
 ## Quick Start
 
 ```bash
-# Install dependencies
-uv sync
+# Install dependencies (including dev tools like pytest)
+uv sync --extra dev
 
 # Run tests
 uv run pytest
 
 # Start the application
 uv run python -m ai_shopping
+# Then open http://localhost:8000 in your browser
 ```
 
 ## Architecture

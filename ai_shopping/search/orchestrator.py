@@ -57,11 +57,15 @@ class SearchOrchestrator:
         failed_scrapers: list[str] = []
 
         for i, result in enumerate(results_lists):
+            scraper_name = scrapers[i].name
             if isinstance(result, Exception):
-                scraper_name = scrapers[i].name
                 errors.append(f"{scraper_name}: {result}")
                 failed_scrapers.append(scraper_name)
                 logger.warning("Scraper %s failed: %s", scraper_name, result)
+            elif not result:
+                # Live scraper returned nothing (blocked/CAPTCHA) — treat as failed
+                failed_scrapers.append(scraper_name)
+                logger.info("Scraper %s returned no results, will use fallback", scraper_name)
             else:
                 all_items.extend(result)
 
